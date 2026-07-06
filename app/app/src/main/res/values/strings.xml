@@ -50,6 +50,9 @@
     <string name="action_import">Import from JSON file</string>
     <string name="action_configuration">Configuration</string>
     <string name="action_standalone">Standalone mode</string>
+    <string name="action_skip">Skip</string>
+    <string name="action_next">Next</string>
+    <string name="action_done">Done</string>
 
     <!-- Messages -->
     <string name="info_message_start">Save the configuration and starts the procesus</string>
@@ -98,6 +101,8 @@
     <string name="widget_xy_coordinates">Points to click on</string>
     <string name="widget_notifications">Notifications</string>
     <string name="widget_standalone_dialog_title">Standalone mode</string>
+    <string name="standalone_mode_title_all_points">JSON files</string>
+    <string name="standalone_mode_title_all_points_screen">JSON files and boot according to the screen</string>
     <string name="widget_sounds">Ring on each click</string>
 
     <!-- Splash screen -->

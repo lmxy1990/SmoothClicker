@@ -31,45 +31,25 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.preference.EditTextPreference;
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.EditTextPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceManager;
+
 import java.io.File;
 
 import pylapp.smoothclicker.android.R;
-import pylapp.smoothclicker.android.utils.AppConfigVersions;
 import pylapp.smoothclicker.android.utils.Config;
 
-/**
- * The preferences activity of this SmoothClicker app.
- *
- * @author Pierre-Yves Lapersonne
- * @version 2.0.0
- * @since 17/03/2016
- */
 public class SettingsActivity extends AppCompatActivity {
 
-
-    /* ********** *
-     * ATTRIBUTES *
-     * ********** */
-
-    /**
-     * The release
-     */
     private static String sVersionRelease;
-
-
-    /* ********* *
-     * CONSTANTS *
-     * ********* */
 
     private static final String PREF_KEY_CREDITS                = "pref_key_credit";
     private static final String PREF_KEY_APP                    = "pref_key_app";
@@ -95,27 +75,11 @@ public class SettingsActivity extends AppCompatActivity {
     public static final String PREF_KEY_FILE_UNLOCK_CONTENT     = "pref_key_unlock_file_content";
     public static final String PREF_KEY_FILE_TRIGGER_CONTENT    = "pref_key_trigger_file_content";
 
-
-    //private static final String LOG_TAG = SettingsActivity.class.getSimpleName();
-
-
-    /* ****************************** *
-     * METHODS FROM AppCompatActivity *
-     * ****************************** */
-
-    /**
-     * Triggered to create the view
-     *
-     * @param savedInstanceState -
-     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
 
-        // Builds the release string
         StringBuilder sb = new StringBuilder();
-        //sb.append(AppConfigVersions.VERSION_TAG_CURRENT);
         try {
             PackageInfo pi = getPackageManager().getPackageInfo(getPackageName(), 0);
             String versionName = pi.versionName;
@@ -127,35 +91,18 @@ public class SettingsActivity extends AppCompatActivity {
         }
         sVersionRelease = sb.toString();
 
-        // Display the fragment as the main content.
-        getFragmentManager()
+        getSupportFragmentManager()
                 .beginTransaction()
                 .replace(android.R.id.content, new SettingsFragment())
                 .commit();
-
     }
 
-
-    /* *********** *
-     * INNER CLASS *
-     * *********** */
-
-    /**
-     * The Fragment for preferences.
-     * See http://developer.android.com/guide/topics/ui/settings.html
-     */
-    public static class SettingsFragment extends PreferenceFragment {
-
+    public static class SettingsFragment extends PreferenceFragmentCompat {
 
         @Override
-        public void onCreate( Bundle savedInstanceState ){
-
-            super.onCreate(savedInstanceState);
+        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             addPreferencesFromResource(R.xml.preferences);
 
-            /*
-             * The credits view with all third party contents
-             */
             Preference pref = findPreference(PREF_KEY_CREDITS);
             pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 public boolean onPreferenceClick(Preference preference) {
@@ -164,9 +111,6 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
-            /*
-             * Set up the listener to make the user go on the Google Play Store's page
-             */
             pref = findPreference(PREF_KEY_STORE_PAGE);
             pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 public boolean onPreferenceClick(Preference preference) {
@@ -180,9 +124,6 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
-            /*
-             * The page of the author
-             */
             pref = findPreference(PREF_KEY_APP);
             pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 public boolean onPreferenceClick(Preference preference) {
@@ -193,15 +134,9 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
-            /*
-             * The version
-             */
             pref = findPreference(PREF_KEY_ABOUT_VERSION);
             pref.setSummary(sVersionRelease);
 
-            /*
-             * To root device under Linux
-             */
             pref = findPreference(PREF_KEY_HEIMDALL);
             pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
@@ -213,9 +148,6 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
-            /*
-             * To root device under Windows
-             */
             pref = findPreference(PREF_KEY_ODIN);
             pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
@@ -227,9 +159,6 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
-            /*
-             * To get information about root
-             */
             pref = findPreference(PREF_KEY_CHAINFIRE);
             pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
@@ -241,9 +170,6 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
-            /*
-             * The tutorial
-             */
             pref = findPreference(PREF_KEY_HELP);
             pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
@@ -256,9 +182,6 @@ public class SettingsActivity extends AppCompatActivity {
 
             final SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(SettingsFragment.this.getActivity());
 
-            /*
-             * See the file containing the points to click on
-             */
             pref = findPreference(PREF_KEY_FILE_POINTS_CONTENT);
             pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
@@ -277,7 +200,7 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 }
             });
-            // Change the content of the field to use to edit the points file's name
+
             pref = findPreference(PREF_KEY_FILE_POINTS_NAME);
             if ( pref.getSummary() == null || pref.getSummary().length() <= 0 ){
                 pref.setSummary(sp.getString(SettingsActivity.PREF_KEY_FILE_POINTS_NAME, Config.DEFAULT_FILE_JSON_POINTS_NAME));
@@ -294,14 +217,6 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
-            final int MIN_SIZE_FILE_NAME = 1;
-            final int MAX_SIZE_FILE_NAME = 100;
-            EditText et = ((EditTextPreference) pref).getEditText();
-            et.setFilters( new InputFilter[]{ new pylapp.smoothclicker.android.views.InputFilter(MIN_SIZE_FILE_NAME, MAX_SIZE_FILE_NAME)} );
-
-            /*
-             * See the file containing the configuration to apply
-             */
             pref = findPreference(PREF_KEY_FILE_CONFIG_CONTENT);
             pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
@@ -320,7 +235,7 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 }
             });
-            // Change the content of the field to use to edit the config file's name
+
             pref = findPreference(PREF_KEY_FILE_CONFIG_NAME);
             if ( pref.getSummary() == null || pref.getSummary().length() <= 0 ){
                 pref.setSummary(sp.getString(SettingsActivity.PREF_KEY_FILE_CONFIG_NAME, Config.DEFAULT_FILE_JSON_CONFIG_NAME));
@@ -336,12 +251,7 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 }
             });
-            et = ((EditTextPreference) pref).getEditText();
-            et.setFilters(new InputFilter[]{new pylapp.smoothclicker.android.views.InputFilter(MIN_SIZE_FILE_NAME, MAX_SIZE_FILE_NAME)});
 
-            /*
-             * See the file containing the unlock script
-             */
             pref = findPreference(PREF_KEY_FILE_UNLOCK_CONTENT);
             pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
@@ -360,7 +270,7 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 }
             });
-            // Change the content of the field to use to edit the unlock file's name
+
             pref = findPreference(PREF_KEY_FILE_UNLOCK_NAME);
             if ( pref.getSummary() == null || pref.getSummary().length() <= 0 ){
                 pref.setSummary(sp.getString(SettingsActivity.PREF_KEY_FILE_UNLOCK_NAME, Config.DEFAULT_FILE_SH_UNLOCK_NAME));
@@ -376,12 +286,7 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 }
             });
-            et = ((EditTextPreference) pref).getEditText();
-            et.setFilters(new InputFilter[]{new pylapp.smoothclicker.android.views.InputFilter(MIN_SIZE_FILE_NAME, MAX_SIZE_FILE_NAME)});
 
-            /*
-             * See the file containing the picture of the screen which should match a screen-shot to trigger the click process
-             */
             pref = findPreference(PREF_KEY_FILE_TRIGGER_CONTENT);
             pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
@@ -400,7 +305,7 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 }
             });
-            // Change the content of the field to use to see the triggering picture file's name
+
             pref = findPreference(PREF_KEY_FILE_TRIGGER_NAME);
             if ( pref.getSummary() == null || pref.getSummary().length() <= 0 ){
                 pref.setSummary(sp.getString(SettingsActivity.PREF_KEY_FILE_TRIGGER_NAME, Config.DEFAULT_FILE_TRIGGER_PICTURE));
@@ -416,11 +321,8 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 }
             });
-            et = ((EditTextPreference) pref).getEditText();
-            et.setFilters(new InputFilter[]{new pylapp.smoothclicker.android.views.InputFilter(MIN_SIZE_FILE_NAME, MAX_SIZE_FILE_NAME)});
 
-        } // End of public void onCreate( Bundle savedInstanceState )
-
-    } // End of public static class SettingsFragment extends PreferenceFragment
+        }
+    }
 
 }

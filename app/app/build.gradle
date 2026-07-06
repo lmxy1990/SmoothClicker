@@ -1,85 +1,52 @@
-/*
-    MIT License
-
-    Copyright (c) 2016  Pierre-Yves Lapersonne (Mail: dev@pylapersonne.info)
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
-*/
-// ✿✿✿✿ ʕ •ᴥ•ʔ/ ︻デ═一
-
-apply plugin: 'com.android.application'
+plugins {
+    id("com.android.application")
+}
 
 android {
-
-    compileSdkVersion 28
+    namespace "pylapp.smoothclicker.android"
+    compileSdk 34
 
     defaultConfig {
         applicationId "pylapp.smoothclicker.android"
-        minSdkVersion 18
-        targetSdkVersion 28
-        versionCode 34
-        versionName "2.1.4 - Juicy Jellyfish"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        minSdk 19
+        targetSdk 34
+        versionCode 35
+        versionName "2.2.0 - Jelly Bean"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     testOptions {
         unitTests.returnDefaultValues = true
     }
 
-    lintOptions {
+    lint {
         checkReleaseBuilds false
         abortOnError false
-    }
-
-}
-
-repositories {
-    flatDir {
-        dirs 'libs'
     }
 }
 
 dependencies {
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.preference:preference:1.2.1")
 
-    implementation(name: 'switchbutton', ext: 'aar')
-    implementation(name: 'materialarcmenu', ext: 'aar')
-    implementation(name: 'swipe-selector', ext: 'aar')
-    implementation(name: 'material-seekbar-preference', ext: 'aar')
-    implementation(name: 'appintro', ext: 'aar')
-    implementation(name: 'dexter', ext: 'aar')
+    
 
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
-    implementation 'com.android.support:cardview-v7:28.0.0'
-
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:rules:0.4.1'
-    androidTestImplementation 'com.android.support.test:runner:0.4.1'
-    androidTestImplementation 'com.android.support.test.uiautomator:uiautomator-v18:2.1.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.1'
-    androidTestImplementation 'com.android.support:support-annotations:28.0.0'
-
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test:core:1.5.0")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }

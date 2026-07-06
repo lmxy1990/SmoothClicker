@@ -150,22 +150,16 @@ public class ATClicker extends AsyncTaskForScreen<List<PointsListAdapter.Point>,
 
         SharedPreferences sp = mContext.getSharedPreferences(Config.SMOOTHCLICKER_SHARED_PREFERENCES_NAME, Config.SP_ACCESS_MODE);
         int unitTime = sp.getInt(Config.SP_KEY_UNIT_TIME, Config.DEFAULT_TIME_UNIT_SELECTION);
-        switch ( unitTime ){
-            case R.id.rbUnitTimeMs:
-                mUnitTime = ConfigImporter.UnitTime.MILLISECOND;
-                break;
-            case R.id.rbUnitTimeS:
-                mUnitTime = ConfigImporter.UnitTime.SECOND;
-                break;
-            case R.id.rbUnitTimeM:
-                mUnitTime = ConfigImporter.UnitTime.MINUTE;
-                break;
-            case R.id.rbUnitTimeH:
-                mUnitTime = ConfigImporter.UnitTime.HOUR;
-                break;
-            default:
-                mUnitTime = ConfigImporter.UnitTime.SECOND;
-                break;
+        if (unitTime == R.id.rbUnitTimeMs) {
+            mUnitTime = ConfigImporter.UnitTime.MILLISECOND;
+        } else if (unitTime == R.id.rbUnitTimeS) {
+            mUnitTime = ConfigImporter.UnitTime.SECOND;
+        } else if (unitTime == R.id.rbUnitTimeM) {
+            mUnitTime = ConfigImporter.UnitTime.MINUTE;
+        } else if (unitTime == R.id.rbUnitTimeH) {
+            mUnitTime = ConfigImporter.UnitTime.HOUR;
+        } else {
+            mUnitTime = ConfigImporter.UnitTime.SECOND;
         }
         mIsStartDelayed = sp.getBoolean(Config.SP_KEY_START_TYPE_DELAYED, Config.DEFAULT_START_DELAYED);
         mDelay = sp.getInt(Config.SP_KEY_DELAY, Integer.parseInt(Config.DEFAULT_DELAY));

@@ -44,11 +44,11 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.support.v7.widget.SwitchCompat;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.widget.SwitchCompat;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -68,9 +68,7 @@ import pylapp.smoothclicker.android.R;
 import pylapp.smoothclicker.android.utils.ConfigStatus;
 import pylapp.smoothclicker.android.tools.Logger;
 
-import com.kyleduo.switchbutton.SwitchButton;
 
-import com.sa90.materialarcmenu.ArcMenu;
 
 import java.io.File;
 import java.io.IOException;
@@ -140,7 +138,7 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
 
         // Check whether we're recreating a previously destroyed instance
         if ( savedInstanceState != null ){
-            SwitchButton typeOfStart = (SwitchButton) findViewById(R.id.sTypeOfStartDelayed);
+            SwitchCompat typeOfStart = (SwitchCompat) findViewById(R.id.sTypeOfStartDelayed);
             typeOfStart.setChecked(savedInstanceState.getBoolean(Config.SP_KEY_START_TYPE_DELAYED));
             EditText et = (EditText) findViewById(R.id.etDelay);
             et.setText(savedInstanceState.getString(Config.SP_KEY_DELAY));
@@ -199,7 +197,7 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
 
         // Get values to save
 
-        SwitchButton sTypeOfStart = (SwitchButton) findViewById(R.id.sTypeOfStartDelayed);
+        SwitchCompat sTypeOfStart = (SwitchCompat) findViewById(R.id.sTypeOfStartDelayed);
         boolean isDelayed = sTypeOfStart.isChecked();
 
         EditText et = (EditText) findViewById(R.id.etDelay);
@@ -292,42 +290,33 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
     @Override
     public boolean onOptionsItemSelected( MenuItem item ){
         int id = item.getItemId();
-        switch ( id ){
-            case R.id.action_clean_points:
-                handleMultiPointResult( null );
-                break;
-            case R.id.action_clean_all:
-                initDefaultValues();
-                break;
-            case R.id.action_settings:
-                startSettingsActivity();
-                break;
-            case R.id.action_exit:
-                handleExit();
-                break;
-            case R.id.action_export:
-                updateConfig();
-                if ( PermissionsManager.isApi23OrHigher() ){
-                    PermissionsManager.instance.getAndGoWithPermissionWriteExternalStorage();
-                } else {
-                    exportConfig();
-                }
-                break;
-            case R.id.action_import:
-                if ( PermissionsManager.isApi23OrHigher() ){
-                    PermissionsManager.instance.getAndGoWithPermissionReadExternalStorage();
-                } else {
-                    importConfig();
-                }
-                break;
-            case R.id.action_configuration:
-                break;
-            case R.id.action_standalone:
-                handleStandaloneMode();
-                break;
-            default:
-                showInSnackbarWithoutAction(getString(R.string.error_not_implemented));
-                break;
+        if (id == R.id.action_clean_points) {
+            handleMultiPointResult(null);
+        } else if (id == R.id.action_clean_all) {
+            initDefaultValues();
+        } else if (id == R.id.action_settings) {
+            startSettingsActivity();
+        } else if (id == R.id.action_exit) {
+            handleExit();
+        } else if (id == R.id.action_export) {
+            updateConfig();
+            if (PermissionsManager.isApi23OrHigher()) {
+                PermissionsManager.instance.getAndGoWithPermissionWriteExternalStorage();
+            } else {
+                exportConfig();
+            }
+        } else if (id == R.id.action_import) {
+            if (PermissionsManager.isApi23OrHigher()) {
+                PermissionsManager.instance.getAndGoWithPermissionReadExternalStorage();
+            } else {
+                importConfig();
+            }
+        } else if (id == R.id.action_configuration) {
+            // Do nothing
+        } else if (id == R.id.action_standalone) {
+            handleStandaloneMode();
+        } else {
+            showInSnackbarWithoutAction(getString(R.string.error_not_implemented));
         }
         return super.onOptionsItemSelected(item);
     }
@@ -394,7 +383,7 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
         Logger.d(LOG_TAG, "Updates configuration");
 
         // Get the defined values
-        SwitchButton sTypeOfStart = (SwitchButton) findViewById(R.id.sTypeOfStartDelayed);
+        SwitchCompat sTypeOfStart = (SwitchCompat) findViewById(R.id.sTypeOfStartDelayed);
         boolean isDelayed = sTypeOfStart.isChecked();
 
         RadioButtonGroupTableLayout rg = (RadioButtonGroupTableLayout) findViewById(R.id.rgUnitsTime);
@@ -466,17 +455,12 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
         sp = getSharedPreferences(Config.SMOOTHCLICKER_SHARED_PREFERENCES_NAME, MODE_PRIVATE);
         exporter.setStartDelayed(sp.getBoolean(Config.SP_KEY_START_TYPE_DELAYED, Config.DEFAULT_START_DELAYED));
         int checkedRbUnitTimeId = sp.getInt(Config.SP_KEY_UNIT_TIME, Config.DEFAULT_TIME_UNIT_SELECTION);
-        switch ( checkedRbUnitTimeId ){
-            case R.id.rbUnitTimeH:
-                exporter.setUnitTime(JsonConfigExporter.UnitTime.HOUR);
-                break;
-            case R.id.rbUnitTimeM:
-                exporter.setUnitTime(JsonConfigExporter.UnitTime.MINUTE);
-                break;
-            case R.id.rbUnitTimeS:
-            default:
-                exporter.setUnitTime(JsonConfigExporter.UnitTime.SECOND);
-                break;
+        if (checkedRbUnitTimeId == R.id.rbUnitTimeH) {
+            exporter.setUnitTime(JsonConfigExporter.UnitTime.HOUR);
+        } else if (checkedRbUnitTimeId == R.id.rbUnitTimeM) {
+            exporter.setUnitTime(JsonConfigExporter.UnitTime.MINUTE);
+        } else {
+            exporter.setUnitTime(JsonConfigExporter.UnitTime.SECOND);
         }
         exporter.setDelay(sp.getInt(Config.SP_KEY_DELAY, Integer.parseInt(Config.DEFAULT_DELAY)));
         exporter.setTimeGap(sp.getInt(Config.SP_KEY_TIME_GAP, Integer.parseInt(Config.DEFAULT_TIME_GAP)));
@@ -559,7 +543,7 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
         rg.reset();
         unitTimeRadioButton.setChecked(true);
         rg.setActiveRadioButton(unitTimeRadioButton);
-        SwitchButton typeOfStart = (SwitchButton) findViewById(R.id.sTypeOfStartDelayed);
+        SwitchCompat typeOfStart = (SwitchCompat) findViewById(R.id.sTypeOfStartDelayed);
         typeOfStart.setChecked(importer.getStartDelayed());
         EditText et = (EditText) findViewById(R.id.etDelay);
         et.setText(importer.getDelay()+"");
@@ -683,7 +667,7 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
 
         RadioButton rbUnitTime = (RadioButton) findViewById(Config.DEFAULT_TIME_UNIT_SELECTION);
         rbUnitTime.setChecked(true);
-        SwitchButton typeOfStart = (SwitchButton) findViewById(R.id.sTypeOfStartDelayed);
+        SwitchCompat typeOfStart = (SwitchCompat) findViewById(R.id.sTypeOfStartDelayed);
         typeOfStart.setChecked(Config.DEFAULT_START_DELAYED);
         EditText et = (EditText) findViewById(R.id.etDelay);
         et.setText(Config.DEFAULT_DELAY);
@@ -946,8 +930,6 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
             public void onClick(View v) {
                 updateConfig();
                 NotificationsManager.getInstance(ClickerActivity.this).refresh(ClickerActivity.this);
-                ArcMenu arcMenu = (ArcMenu) findViewById(R.id.fabAction);
-                arcMenu.toggleMenu();
                 startClickingProcess();
             }
         });
@@ -980,8 +962,6 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ArcMenu fabAction = (ArcMenu) findViewById(R.id.fabAction);
-                if ( fabAction.isMenuOpened() ) fabAction.toggleMenu();
                 startSelectPointActivity();
             }
         });
@@ -1004,7 +984,7 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
 
         // The switch button about the type of start
         // If checked, enabled the filed for the delay
-        SwitchButton sTypeOfStart = (SwitchButton) findViewById(R.id.sTypeOfStartDelayed);
+        SwitchCompat sTypeOfStart = (SwitchCompat) findViewById(R.id.sTypeOfStartDelayed);
         sTypeOfStart.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged( CompoundButton buttonView, boolean isChecked ){
@@ -1115,8 +1095,6 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
                 .getBoolean(SettingsActivity.PREF_KEY_SHAKE_TO_CLEAN, Config.DEFAULT_SHAKE_TO_CLEAN)) {
             Toast.makeText(this, getString(R.string.message_reinit_config), Toast.LENGTH_SHORT).show();
             initDefaultValues();
-            ArcMenu fabAction = (ArcMenu) findViewById(R.id.fabAction);
-            if ( fabAction.isMenuOpened() ) fabAction.toggleMenu();
         }
     }
 

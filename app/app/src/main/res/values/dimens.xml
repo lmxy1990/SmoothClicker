@@ -45,6 +45,7 @@
     <!-- ****************** -->
     <dimen name="introscreens_title_text_size">12sp</dimen>
     <dimen name="introscreens_desc_text_size">8sp</dimen>
+    <dimen name="intro_indicator_size">8dp</dimen>
 
     <!-- ***************** -->
     <!-- The main activity -->
