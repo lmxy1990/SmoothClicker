@@ -1,4 +1,0 @@
-#Mon Jul 06 12:48:07 CST 2026
-base.0=D\:\\code_prompt\\SmoothClicker\\app\\app\\build\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
