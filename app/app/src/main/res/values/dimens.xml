@@ -21,20 +21,21 @@
     <dimen name="text_large_title">28sp</dimen>
 
     <!-- Widget sizes -->
-    <dimen name="button_height">44dp</dimen>
-    <dimen name="button_height_compact">36dp</dimen>
-    <dimen name="input_height">44dp</dimen>
-    <dimen name="input_height_compact">36dp</dimen>
-    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="button_height">36dp</dimen>
+    <dimen name="button_height_compact">32dp</dimen>
+    <dimen name="input_height">36dp</dimen>
+    <dimen name="input_height_compact">32dp</dimen>
+    <dimen name="card_corner_radius">10dp</dimen>
     <dimen name="card_elevation">0dp</dimen>
-    <dimen name="card_margin_horizontal">16dp</dimen>
-    <dimen name="card_margin_vertical">6dp</dimen>
-    <dimen name="card_padding">16dp</dimen>
-    <dimen name="card_inner_spacing">12dp</dimen>
-    <dimen name="icon_size_small">18dp</dimen>
-    <dimen name="icon_size_medium">24dp</dimen>
-    <dimen name="icon_container_small">32dp</dimen>
-    <dimen name="icon_container_medium">40dp</dimen>
+    <dimen name="card_margin_horizontal">12dp</dimen>
+    <dimen name="card_margin_vertical">4dp</dimen>
+    <dimen name="card_padding">12dp</dimen>
+    <dimen name="card_inner_spacing">10dp</dimen>
+    <dimen name="icon_size_small">16dp</dimen>
+    <dimen name="icon_size_medium">20dp</dimen>
+    <dimen name="icon_container_small">28dp</dimen>
+    <dimen name="icon_container_medium">36dp</dimen>
+    <dimen name="button_text_size">13sp</dimen>
 
     <!-- Clicker main content -->
     <dimen name="widget_label_text_size">13sp</dimen>
