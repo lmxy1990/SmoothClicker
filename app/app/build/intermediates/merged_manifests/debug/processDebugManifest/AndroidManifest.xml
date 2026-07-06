@@ -27,8 +27,8 @@
     package="pylapp.smoothclicker.android"
     android:sharedUserId="@string/app_sharedUserId"
     android:sharedUserLabel="@string/app_sharedUserLabel"
-    android:versionCode="36"
-    android:versionName="2.3.0 - KitKat" >
+    android:versionCode="37"
+    android:versionName="2.4.0 - Scripts" >
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -141,6 +141,7 @@
         <!-- The script list activity -->
         <activity
             android:name="pylapp.smoothclicker.android.views.ScriptListActivity"
+            android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />

@@ -7,11 +7,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "smoothclicker.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     public static final String TABLE_SCRIPTS = "scripts";
     public static final String COLUMN_SCRIPT_ID = "_id";
     public static final String COLUMN_SCRIPT_NAME = "name";
+    public static final String COLUMN_SCRIPT_CATEGORY = "category";
     public static final String COLUMN_SCRIPT_CREATED_AT = "created_at";
     public static final String COLUMN_SCRIPT_UPDATED_AT = "updated_at";
 
@@ -47,6 +48,7 @@ public class DBHelper extends SQLiteOpenHelper {
             "CREATE TABLE " + TABLE_SCRIPTS + " (" +
                     COLUMN_SCRIPT_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     COLUMN_SCRIPT_NAME + " TEXT NOT NULL, " +
+                    COLUMN_SCRIPT_CATEGORY + " TEXT DEFAULT '', " +
                     COLUMN_SCRIPT_CREATED_AT + " INTEGER NOT NULL, " +
                     COLUMN_SCRIPT_UPDATED_AT + " INTEGER NOT NULL);";
 
@@ -95,9 +97,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_MULTI_ACTIONS);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_ACTIONS);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_SCRIPTS);
-        onCreate(db);
+        if (oldVersion < 2) {
+            db.execSQL("ALTER TABLE " + TABLE_SCRIPTS + " ADD COLUMN " + COLUMN_SCRIPT_CATEGORY + " TEXT DEFAULT '';");
+        }
     }
 }

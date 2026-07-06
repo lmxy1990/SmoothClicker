@@ -3,50 +3,64 @@ package pylapp.smoothclicker.android.views;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.ContextMenu;
+import android.os.Handler;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.util.Collections;
+import java.util.List;
 
 import pylapp.smoothclicker.android.R;
 import pylapp.smoothclicker.android.database.Action;
 import pylapp.smoothclicker.android.database.DatabaseManager;
 import pylapp.smoothclicker.android.database.MultiAction;
-import pylapp.smoothclicker.android.views.PointsListAdapter.Point;
-
-import java.io.DataOutputStream;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
+import pylapp.smoothclicker.android.database.Script;
 
 public class ActionListActivity extends AppCompatActivity {
 
     public static final int REQUEST_EDIT_ACTION = 100;
 
-    private ListView mLvActions;
+    private RecyclerView mRvActions;
     private List<Action> mActions;
-    private ActionAdapter mAdapter;
+    private ActionRecyclerAdapter mAdapter;
     private DatabaseManager mDbManager;
     private long mScriptId;
     private String mScriptName;
+    private ProgressBar mProgressBar;
+    private TextView mTvProgress;
+    private Handler mHandler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("SmoothClicker", "ActionListActivity onCreate called");
         setContentView(R.layout.activity_action_list_new);
 
         Intent intent = getIntent();
         mScriptId = intent.getLongExtra("script_id", -1);
         mScriptName = intent.getStringExtra("script_name");
+        Log.d("SmoothClicker", "ActionListActivity: script_id=" + mScriptId + ", script_name=" + mScriptName);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -56,27 +70,40 @@ public class ActionListActivity extends AppCompatActivity {
         mDbManager = new DatabaseManager(this);
         mDbManager.open();
 
-        mLvActions = findViewById(R.id.lvActions);
-        registerForContextMenu(mLvActions);
+        mProgressBar = findViewById(R.id.progressBar);
+        mTvProgress = findViewById(R.id.tvProgress);
 
-        mLvActions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mRvActions = findViewById(R.id.rvActions);
+        mRvActions.setLayoutManager(new LinearLayoutManager(this));
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new ItemTouchHelper.Callback() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Action action = mActions.get(position);
-                if (action.type == Action.TYPE_MULTI) {
-                    Intent i = new Intent(ActionListActivity.this, MultiActionEditActivity.class);
-                    i.putExtra("action_id", action.id);
-                    i.putExtra("script_id", mScriptId);
-                    i.putExtra("action_name", action.name);
-                    startActivityForResult(i, REQUEST_EDIT_ACTION);
-                } else {
-                    Intent i = new Intent(ActionListActivity.this, ActionEditActivity.class);
-                    i.putExtra("action_id", action.id);
-                    i.putExtra("script_id", mScriptId);
-                    startActivityForResult(i, REQUEST_EDIT_ACTION);
-                }
+            public int getMovementFlags(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder) {
+                int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
+                int swipeFlags = 0;
+                return makeMovementFlags(dragFlags, swipeFlags);
+            }
+
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                int fromPos = viewHolder.getAdapterPosition();
+                int toPos = target.getAdapterPosition();
+                Collections.swap(mActions, fromPos, toPos);
+                mAdapter.notifyItemMoved(fromPos, toPos);
+                updateActionOrders();
+                return true;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+            }
+
+            @Override
+            public boolean isLongPressDragEnabled() {
+                return true;
             }
         });
+        itemTouchHelper.attachToRecyclerView(mRvActions);
 
         FloatingActionButton fabAdd = findViewById(R.id.fabAdd);
         fabAdd.setOnClickListener(new View.OnClickListener() {
@@ -91,6 +118,14 @@ public class ActionListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 playScript();
+            }
+        });
+
+        Button btnExport = findViewById(R.id.btnExport);
+        btnExport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                exportScript();
             }
         });
 
@@ -132,8 +167,43 @@ public class ActionListActivity extends AppCompatActivity {
 
     private void loadActions() {
         mActions = mDbManager.getActionsByScript(mScriptId);
-        mAdapter = new ActionAdapter(this, mActions);
-        mLvActions.setAdapter(mAdapter);
+        mAdapter = new ActionRecyclerAdapter(this, mActions, new ActionRecyclerAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Action action) {
+                if (action.type == Action.TYPE_MULTI) {
+                    Intent i = new Intent(ActionListActivity.this, MultiActionEditActivity.class);
+                    i.putExtra("action_id", action.id);
+                    i.putExtra("script_id", mScriptId);
+                    i.putExtra("action_name", action.name);
+                    startActivityForResult(i, REQUEST_EDIT_ACTION);
+                } else {
+                    Intent i = new Intent(ActionListActivity.this, ActionEditActivity.class);
+                    i.putExtra("action_id", action.id);
+                    i.putExtra("script_id", mScriptId);
+                    startActivityForResult(i, REQUEST_EDIT_ACTION);
+                }
+            }
+
+            @Override
+            public void onDeleteClick(Action action) {
+                mDbManager.deleteAction(action.id);
+                loadActions();
+                Toast.makeText(ActionListActivity.this, R.string.action_deleted, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onItemMove(int fromPosition, int toPosition) {
+                updateActionOrders();
+            }
+        });
+        mRvActions.setAdapter(mAdapter);
+    }
+
+    private void updateActionOrders() {
+        for (int i = 0; i < mActions.size(); i++) {
+            mActions.get(i).orderNum = i;
+            mDbManager.updateActionOrder(mActions.get(i).id, i);
+        }
     }
 
     private void showAddActionDialog() {
@@ -174,16 +244,30 @@ public class ActionListActivity extends AppCompatActivity {
             return;
         }
 
+        mProgressBar.setVisibility(View.VISIBLE);
+        mTvProgress.setVisibility(View.VISIBLE);
+        mProgressBar.setMax(mActions.size());
+        mProgressBar.setProgress(0);
+
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     Process process = Runtime.getRuntime().exec("su");
                     DataOutputStream outputStream = new DataOutputStream(process.getOutputStream());
-                    InputStream inputStream = process.getInputStream();
-                    byte[] buffer = new byte[1024];
 
-                    for (Action action : mActions) {
+                    for (int i = 0; i < mActions.size(); i++) {
+                        final int finalI = i;
+                        final Action action = mActions.get(i);
+
+                        mHandler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                mProgressBar.setProgress(finalI);
+                                mTvProgress.setText(String.format(getString(R.string.executing_action), finalI + 1, mActions.size(), action.name));
+                            }
+                        });
+
                         String cmd;
                         if (action.type == Action.TYPE_CLICK) {
                             cmd = "/system/bin/input tap " + action.x + " " + action.y + "\n";
@@ -203,6 +287,7 @@ public class ActionListActivity extends AppCompatActivity {
                                 outputStream.writeBytes(cmd);
                                 outputStream.flush();
                             }
+                            Thread.sleep(action.waitTime);
                             continue;
                         }
                         outputStream.writeBytes(cmd);
@@ -211,13 +296,91 @@ public class ActionListActivity extends AppCompatActivity {
                     }
                     outputStream.close();
                     process.waitFor();
+
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mProgressBar.setProgress(mActions.size());
+                            mTvProgress.setText(R.string.script_finished);
+                            Toast.makeText(ActionListActivity.this, R.string.script_finished, Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                    Thread.sleep(2000);
+
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mProgressBar.setVisibility(View.GONE);
+                            mTvProgress.setVisibility(View.GONE);
+                        }
+                    });
+
                 } catch (Exception e) {
                     e.printStackTrace();
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mProgressBar.setVisibility(View.GONE);
+                            mTvProgress.setVisibility(View.GONE);
+                            Toast.makeText(ActionListActivity.this, R.string.script_error, Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
             }
         }).start();
+    }
 
-        Toast.makeText(this, R.string.script_playing, Toast.LENGTH_SHORT).show();
+    private void exportScript() {
+        try {
+            Script script = mDbManager.getScript(mScriptId);
+            JSONObject json = new JSONObject();
+            json.put("name", script.name);
+            json.put("category", script.category);
+
+            JSONArray actionsArray = new JSONArray();
+            for (Action action : mActions) {
+                JSONObject actionJson = new JSONObject();
+                actionJson.put("name", action.name);
+                actionJson.put("type", action.type);
+                actionJson.put("x", action.x);
+                actionJson.put("y", action.y);
+                actionJson.put("endX", action.endX);
+                actionJson.put("endY", action.endY);
+                actionJson.put("duration", action.duration);
+                actionJson.put("repeatCount", action.repeat);
+                actionJson.put("waitTime", action.waitTime);
+
+                if (action.type == Action.TYPE_MULTI) {
+                    List<MultiAction> multiActions = mDbManager.getMultiActionsByParent(action.id);
+                    JSONArray multiArray = new JSONArray();
+                    for (MultiAction ma : multiActions) {
+                        JSONObject maJson = new JSONObject();
+                        maJson.put("type", ma.type);
+                        maJson.put("x", ma.x);
+                        maJson.put("y", ma.y);
+                        maJson.put("endX", ma.endX);
+                        maJson.put("endY", ma.endY);
+                        maJson.put("duration", ma.duration);
+                        maJson.put("delay", ma.delay);
+                        multiArray.put(maJson);
+                    }
+                    actionJson.put("multiActions", multiArray);
+                }
+                actionsArray.put(actionJson);
+            }
+            json.put("actions", actionsArray);
+
+            String fileName = script.name.replaceAll("[^a-zA-Z0-9]", "_") + ".json";
+            FileOutputStream fos = openFileOutput(fileName, MODE_PRIVATE);
+            fos.write(json.toString().getBytes());
+            fos.close();
+
+            Toast.makeText(this, String.format(getString(R.string.export_success), fileName), Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(this, R.string.export_failed, Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void showDeleteScriptDialog() {
@@ -237,22 +400,11 @@ public class ActionListActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        super.onCreateContextMenu(menu, v, menuInfo);
-        getMenuInflater().inflate(R.menu.menu_action_context, menu);
-    }
-
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-        final Action action = mActions.get(info.position);
-
-        if (item.getItemId() == R.id.action_delete_action) {
-            mDbManager.deleteAction(action.id);
-            loadActions();
-            Toast.makeText(this, R.string.action_deleted, Toast.LENGTH_SHORT).show();
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
             return true;
         }
-        return super.onContextItemSelected(item);
+        return super.onOptionsItemSelected(item);
     }
 }

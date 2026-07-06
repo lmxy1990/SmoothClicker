@@ -28,6 +28,7 @@ public class DatabaseManager {
     public long insertScript(Script script) {
         ContentValues values = new ContentValues();
         values.put(DBHelper.COLUMN_SCRIPT_NAME, script.name);
+        values.put(DBHelper.COLUMN_SCRIPT_CATEGORY, script.category);
         values.put(DBHelper.COLUMN_SCRIPT_CREATED_AT, script.createdAt);
         values.put(DBHelper.COLUMN_SCRIPT_UPDATED_AT, script.updatedAt);
         return database.insert(DBHelper.TABLE_SCRIPTS, null, values);
@@ -36,6 +37,7 @@ public class DatabaseManager {
     public void updateScript(Script script) {
         ContentValues values = new ContentValues();
         values.put(DBHelper.COLUMN_SCRIPT_NAME, script.name);
+        values.put(DBHelper.COLUMN_SCRIPT_CATEGORY, script.category);
         values.put(DBHelper.COLUMN_SCRIPT_UPDATED_AT, script.updatedAt);
         database.update(DBHelper.TABLE_SCRIPTS, values,
                 DBHelper.COLUMN_SCRIPT_ID + " = ?",
@@ -69,6 +71,36 @@ public class DatabaseManager {
         return scripts;
     }
 
+    public List<Script> getScriptsByCategory(String category) {
+        List<Script> scripts = new ArrayList<>();
+        Cursor cursor = database.query(DBHelper.TABLE_SCRIPTS,
+                null, DBHelper.COLUMN_SCRIPT_CATEGORY + " = ?",
+                new String[]{category}, null, null,
+                DBHelper.COLUMN_SCRIPT_CREATED_AT + " DESC");
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Script script = cursorToScript(cursor);
+            scripts.add(script);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return scripts;
+    }
+
+    public List<String> getAllCategories() {
+        List<String> categories = new ArrayList<>();
+        Cursor cursor = database.rawQuery(
+                "SELECT DISTINCT " + DBHelper.COLUMN_SCRIPT_CATEGORY + " FROM " + DBHelper.TABLE_SCRIPTS + " WHERE " + DBHelper.COLUMN_SCRIPT_CATEGORY + " != '' ORDER BY " + DBHelper.COLUMN_SCRIPT_CATEGORY,
+                null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            categories.add(cursor.getString(0));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return categories;
+    }
+
     public Script getScript(long scriptId) {
         Cursor cursor = database.query(DBHelper.TABLE_SCRIPTS,
                 null, DBHelper.COLUMN_SCRIPT_ID + " = ?",
@@ -87,6 +119,7 @@ public class DatabaseManager {
         Script script = new Script();
         script.id = cursor.getLong(cursor.getColumnIndex(DBHelper.COLUMN_SCRIPT_ID));
         script.name = cursor.getString(cursor.getColumnIndex(DBHelper.COLUMN_SCRIPT_NAME));
+        script.category = cursor.getString(cursor.getColumnIndex(DBHelper.COLUMN_SCRIPT_CATEGORY));
         script.createdAt = cursor.getLong(cursor.getColumnIndex(DBHelper.COLUMN_SCRIPT_CREATED_AT));
         script.updatedAt = cursor.getLong(cursor.getColumnIndex(DBHelper.COLUMN_SCRIPT_UPDATED_AT));
         return script;
@@ -123,6 +156,14 @@ public class DatabaseManager {
         database.update(DBHelper.TABLE_ACTIONS, values,
                 DBHelper.COLUMN_ACTION_ID + " = ?",
                 new String[]{String.valueOf(action.id)});
+    }
+
+    public void updateActionOrder(long actionId, int order) {
+        ContentValues values = new ContentValues();
+        values.put(DBHelper.COLUMN_ACTION_ORDER, order);
+        database.update(DBHelper.TABLE_ACTIONS, values,
+                DBHelper.COLUMN_ACTION_ID + " = ?",
+                new String[]{String.valueOf(actionId)});
     }
 
     public void deleteAction(long actionId) {

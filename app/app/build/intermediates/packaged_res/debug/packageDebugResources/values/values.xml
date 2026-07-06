@@ -100,15 +100,27 @@
         <item>Артем Дементьев</item>
         <item>fuomag9</item>
     </string-array>
-    <color name="colorAccent">#01579b</color>
-    <color name="colorBlack">#000000</color>
-    <color name="colorMisterGrey">#9e9e9e</color>
-    <color name="colorPrimary">#9c27b0</color>
-    <color name="colorPrimaryDark">#7b1fa2</color>
-    <color name="colorPrimaryLight">#ce93d8</color>
-    <color name="colorTransparent">#409c27b0</color>
-    <color name="lightBackground">#f5f5f5</color>
-    <color name="secondaryText">#757575</color>
+    <color name="clickTypeColor">#2563EB</color>
+    <color name="colorAccent">#8B5CF6</color>
+    <color name="colorAccentLight">#A78BFA</color>
+    <color name="colorBlack">#1A1A1A</color>
+    <color name="colorMisterGrey">#9CA3AF</color>
+    <color name="colorPrimary">#2563EB</color>
+    <color name="colorPrimaryDark">#1D4ED8</color>
+    <color name="colorPrimaryLight">#3B82F6</color>
+    <color name="colorTransparent">#402563EB</color>
+    <color name="dividerColor">#F3F4F6</color>
+    <color name="errorColor">#EF4444</color>
+    <color name="gray">#9CA3AF</color>
+    <color name="lightBackground">#F9FAFB</color>
+    <color name="lightGray">#E5E7EB</color>
+    <color name="multiTypeColor">#8B5CF6</color>
+    <color name="secondaryText">#6B7280</color>
+    <color name="successColor">#10B981</color>
+    <color name="surfaceBackground">#FFFFFF</color>
+    <color name="swipeTypeColor">#10B981</color>
+    <color name="tertiaryText">#9CA3AF</color>
+    <color name="warningColor">#F59E0B</color>
     <color name="white">#FFFFFF</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -153,6 +165,7 @@
     <string name="add_action">Add Action</string>
     <string name="add_script">Add Script</string>
     <string name="add_sub_action">Add Sub-action</string>
+    <string name="all_categories">All Categories</string>
     <string name="all_cleared">All actions cleared</string>
     <string name="app_author">https://twitter.com/pylapp</string>
     <string name="app_intro">Welcome to Smooth Clicker</string>
@@ -163,9 +176,11 @@
     <string name="cancel">Cancel</string>
     <string name="cannot_move_down">Cannot move down</string>
     <string name="cannot_move_up">Cannot move up</string>
+    <string name="category_hint">Category (optional)</string>
     <string name="clear_all">Clear All</string>
     <string name="click_desc">Click (%1$d,%2$d)</string>
     <string name="coordinate_hint">0</string>
+    <string name="coordinates">Coordinates</string>
     <string name="delay">Delay</string>
     <string name="delay_desc">Delay %dms</string>
     <string name="delete">Delete</string>
@@ -189,6 +204,13 @@
     <string name="error_nothing_to_open_file">Woops nothing can open this file</string>
     <string name="error_nothing_to_open_json">Woops nothing can open the .json file</string>
     <string name="error_su_missing">Did you root your Android before using this app? It is mandatory.</string>
+    <string name="executing_action">Executing action %1$d/%2$d: %3$s</string>
+    <string name="export">Export</string>
+    <string name="export_failed">Export failed</string>
+    <string name="export_success">Exported to %s</string>
+    <string name="import_failed">Import failed</string>
+    <string name="import_script">Import</string>
+    <string name="import_success">Import successful</string>
     <string name="info_export_fail">Export has failed</string>
     <string name="info_export_success">Export has been made</string>
     <string name="info_import_fail">Import has failed</string>
@@ -285,14 +307,18 @@
     <string name="rename">Rename</string>
     <string name="rename_script">Rename Script</string>
     <string name="repeat">Repeat</string>
+    <string name="repeat_settings">Repeat</string>
     <string name="save">Save</string>
     <string name="script_added">Script added</string>
     <string name="script_deleted">Script deleted</string>
+    <string name="script_error">Script execution error</string>
+    <string name="script_finished">Script finished</string>
     <string name="script_name_hint">Enter script name</string>
     <string name="script_playing">Script playing...</string>
     <string name="script_renamed">Script renamed</string>
     <string name="search_hint">Search scripts...</string>
     <string name="select_action_first">Select an action first</string>
+    <string name="select_category">Select Category</string>
     <string name="service_label_serviceclicker">Service Clicker of Smooth Clicker</string>
     <string name="snackbar_action_dismiss">Undo</string>
     <string name="snackbar_see_config_file">Read</string>
@@ -307,6 +333,8 @@
     <string name="start_y">Start Y</string>
     <string name="su_grant_error_prefix">An error occurs during SU grant : </string>
     <string name="swipe_desc">Swipe (%1$d,%2$d) → (%3$d,%4$d)</string>
+    <string name="times">times</string>
+    <string name="timing_settings">Timing</string>
     <string name="wait_time">Wait Time</string>
     <string name="warning_hazard_repeat_endless_content">Are you sure to make an endless repeat? This operation may be hazardous for your device.</string>
     <string name="warning_hazard_repeat_endless_no">Nope!</string>
@@ -332,12 +360,12 @@
     <string name="widget_vibrate_on_click">Vibrate on click</string>
     <string name="widget_vibrate_on_start">Vibrate on start</string>
     <string name="widget_xy_coordinates">Points to click on</string>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:windowBackground">@color/lightBackground</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.NoActionBar">
@@ -353,7 +381,6 @@
     </style>
     <style name="Theme.Transparent" parent="Theme.AppCompat">
         <item name="android:windowIsTranslucent">true</item>
-        
         <item name="android:windowBackground">@color/colorTransparent</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowNoTitle">true</item>
@@ -361,5 +388,35 @@
         <item name="android:backgroundDimEnabled">false</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Widget.Button.Primary" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_primary_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+    <style name="Widget.Button.Secondary" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_secondary_background</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+    <style name="Widget.Card" parent="android:Widget">
+        <item name="android:background">@drawable/card_background</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
     </style>
 </resources>

@@ -1,11 +1,31 @@
 [
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-anydpi-v21_ic_arrow_right.xml.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-anydpi-v21\\ic_arrow_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-ldpi_ic_drag.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-ldpi\\ic_drag.png"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xhdpi_ic_multi.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xhdpi\\ic_multi.png"
     },
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-ldpi_ic_add.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-ldpi\\ic_add.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxhdpi_ic_script.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xxhdpi\\ic_script.png"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_root.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable-mdpi\\root.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable_input_background.xml.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable\\input_background.xml"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_content_clicker_vibrate_on_click.xml.flat",
@@ -18,6 +38,10 @@
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-hdpi_ic_multi.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-hdpi\\ic_multi.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable_card_background.xml.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable\\card_background.xml"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_ic_swipe.png.flat",
@@ -36,16 +60,16 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable-mdpi\\standalone.png"
     },
     {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-anydpi-v21_ic_arrow_right.xml.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-anydpi-v21/ic_arrow_right.xml"
-    },
-    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_activity_multi_action_edit.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\activity_multi_action_edit.xml"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxxhdpi_logo_512.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable-xxxhdpi\\logo_512.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_ic_add.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-mdpi\\ic_add.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_content_clicker_notifications.xml.flat",
@@ -60,6 +84,14 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\item_action.xml"
     },
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_ic_drag.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-mdpi\\ic_drag.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xhdpi_ic_add.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xhdpi\\ic_add.png"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-anydpi-v21_ic_expand_more.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-anydpi-v21\\ic_expand_more.xml"
     },
@@ -72,8 +104,20 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\dialog_multi_action_edit.xml"
     },
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxxhdpi_ic_drag.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xxxhdpi\\ic_drag.png"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-debug-39:/layout-land_activity_action_edit.xml.flat",
+        "source": "pylapp.smoothclicker.android.app-main-41:/layout-land/activity_action_edit.xml"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable_indicator_active.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable\\indicator_active.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-hdpi_ic_arrow_right.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-hdpi\\ic_arrow_right.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_content_clicker_repeat_endless.xml.flat",
@@ -84,12 +128,20 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable-mdpi\\menu_stop_process.png"
     },
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_ic_arrow_right.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-mdpi\\ic_arrow_right.png"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_screenrecognition.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable-mdpi\\screenrecognition.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_menu_start_process.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable-mdpi\\menu_start_process.png"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-debug-39:/layout-land_activity_multi_action_edit.xml.flat",
+        "source": "pylapp.smoothclicker.android.app-main-41:/layout-land/activity_multi_action_edit.xml"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-ldpi_ic_delete.png.flat",
@@ -104,12 +156,16 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-ldpi\\ic_swipe.png"
     },
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxhdpi_ic_search.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xxhdpi\\ic_search.png"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_content_clicker_points.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\content_clicker_points.xml"
     },
     {
-        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxhdpi_ic_search.png.flat",
-        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xxhdpi\\ic_search.png"
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxhdpi_ic_drag.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xxhdpi\\ic_drag.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_ic_search.png.flat",
@@ -120,20 +176,20 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-hdpi\\ic_delete.png"
     },
     {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-xhdpi_ic_arrow_right.png.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-xhdpi/ic_arrow_right.png"
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable_button_secondary_background.xml.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable\\button_secondary_background.xml"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-hdpi_ic_expand_less.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-hdpi\\ic_expand_less.png"
     },
     {
-        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_ic_multi.png.flat",
-        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-mdpi\\ic_multi.png"
-    },
-    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xhdpi_ic_swipe.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xhdpi\\ic_swipe.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_ic_multi.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-mdpi\\ic_multi.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_content_clicker_unit_time.xml.flat",
@@ -144,16 +200,16 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-ldpi\\ic_click.png"
     },
     {
+        "merged": "pylapp.smoothclicker.android.app-debug-39:/layout-land_activity_action_list_new.xml.flat",
+        "source": "pylapp.smoothclicker.android.app-main-41:/layout-land/activity_action_list_new.xml"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_content_thanks_row.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\content_thanks_row.xml"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_content_clicker_time_gap.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\content_clicker_time_gap.xml"
-    },
-    {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-mdpi_ic_add.png.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-mdpi/ic_add.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_content_clicker_cards_multipoints.xml.flat",
@@ -168,8 +224,8 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xhdpi\\ic_expand_more.png"
     },
     {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-xxxhdpi_ic_add.png.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-xxxhdpi/ic_add.png"
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xhdpi_ic_script.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xhdpi\\ic_script.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_dialog_standalonemode.xml.flat",
@@ -184,12 +240,28 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-ldpi\\ic_search.png"
     },
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-hdpi_ic_add.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-hdpi\\ic_add.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-hdpi_ic_drag.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-hdpi\\ic_drag.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable_circle_click_background.xml.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable\\circle_click_background.xml"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_activity_ninja.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\activity_ninja.xml"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-anydpi-v21_ic_search.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-anydpi-v21\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-hdpi_ic_script.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-hdpi\\ic_script.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_clicks.png.flat",
@@ -200,28 +272,36 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\raw\\new_click.mp3"
     },
     {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-ldpi_ic_add.png.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-ldpi/ic_add.png"
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable_button_delete_background.xml.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable\\button_delete_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-ldpi_ic_arrow_right.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-ldpi\\ic_arrow_right.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_activity_splash_screen.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\activity_splash_screen.xml"
     },
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-anydpi-v21_ic_add.xml.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-anydpi-v21\\ic_add.xml"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_activity_script_list.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\activity_script_list.xml"
     },
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xhdpi_ic_drag.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xhdpi\\ic_drag.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable_button_primary_background.xml.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable\\button_primary_background.xml"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_fragment_intro_custom.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\fragment_intro_custom.xml"
-    },
-    {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-anydpi-v21_ic_add.xml.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-anydpi-v21/ic_add.xml"
-    },
-    {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-xhdpi_ic_add.png.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-xhdpi/ic_add.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-ldpi_ic_expand_more.png.flat",
@@ -244,6 +324,10 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xxhdpi\\ic_expand_less.png"
     },
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_ic_script.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-mdpi\\ic_script.png"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable_circle_background.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable\\circle_background.xml"
     },
@@ -264,6 +348,18 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-ldpi\\ic_expand_less.png"
     },
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxxhdpi_ic_arrow_right.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xxxhdpi\\ic_arrow_right.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xhdpi_ic_arrow_right.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xhdpi\\ic_arrow_right.png"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-debug-39:/layout-land_activity_script_list.xml.flat",
+        "source": "pylapp.smoothclicker.android.app-main-41:/layout-land/activity_script_list.xml"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xhdpi_ic_search.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xhdpi\\ic_search.png"
     },
@@ -272,8 +368,16 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-hdpi\\ic_click.png"
     },
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_dialog_add_script.xml.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\dialog_add_script.xml"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xhdpi_ic_click.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xhdpi\\ic_click.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable_circle_multi_background.xml.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable\\circle_multi_background.xml"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-anydpi-v21_ic_delete.xml.flat",
@@ -294,10 +398,6 @@
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xhdpi_ic_expand_less.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xhdpi\\ic_expand_less.png"
-    },
-    {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-xxhdpi_ic_arrow_right.png.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-xxhdpi/ic_arrow_right.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xhdpi_ic_delete.png.flat",
@@ -322,10 +422,6 @@
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_content_clicker_delay.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\content_clicker_delay.xml"
-    },
-    {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-ldpi_ic_arrow_right.png.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-ldpi/ic_arrow_right.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxxhdpi_ic_expand_less.png.flat",
@@ -356,6 +452,10 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xxhdpi\\ic_swipe.png"
     },
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxxhdpi_ic_add.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xxxhdpi\\ic_add.png"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxxhdpi_ic_click.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xxxhdpi\\ic_click.png"
     },
@@ -376,8 +476,8 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable-mdpi\\json.png"
     },
     {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-xxhdpi_ic_add.png.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-xxhdpi/ic_add.png"
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxxhdpi_ic_script.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xxxhdpi\\ic_script.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_content_clicker_repeat.xml.flat",
@@ -416,20 +516,28 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-hdpi\\ic_expand_more.png"
     },
     {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-hdpi_ic_add.png.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-hdpi/ic_add.png"
-    },
-    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_menu_arc.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable-mdpi\\menu_arc.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-anydpi-v21_ic_drag.xml.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-anydpi-v21\\ic_drag.xml"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\menu_menu_action_context.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\menu\\menu_action_context.xml"
     },
     {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable_circle_swipe_background.xml.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable\\circle_swipe_background.xml"
+    },
+    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_icon_clean_all.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable-mdpi\\icon_clean_all.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-ldpi_ic_script.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-ldpi\\ic_script.png"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxhdpi_ic_multi.png.flat",
@@ -440,8 +548,12 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\content_clicker_start_type.xml"
     },
     {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-hdpi_ic_arrow_right.png.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-hdpi/ic_arrow_right.png"
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxhdpi_ic_arrow_right.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xxhdpi\\ic_arrow_right.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-anydpi-v21_ic_script.xml.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-anydpi-v21\\ic_script.xml"
     },
     {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-mdpi_credits_flag_ru.png.flat",
@@ -472,10 +584,6 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\list_action_child.xml"
     },
     {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-xxxhdpi_ic_arrow_right.png.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-xxxhdpi/ic_arrow_right.png"
-    },
-    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\layout_list_points_item.xml.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\layout\\list_points_item.xml"
     },
@@ -492,15 +600,15 @@
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-main-41:\\drawable-mdpi\\smooth_clicker.png"
     },
     {
-        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-hdpi_ic_search.png.flat",
-        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-hdpi\\ic_search.png"
-    },
-    {
         "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-ldpi_ic_multi.png.flat",
         "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-ldpi\\ic_multi.png"
     },
     {
-        "merged": "pylapp.smoothclicker.android.app-debug-39:/drawable-mdpi_ic_arrow_right.png.flat",
-        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-mdpi/ic_arrow_right.png"
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-xxhdpi_ic_add.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-xxhdpi\\ic_add.png"
+    },
+    {
+        "merged": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-debug-39:\\drawable-hdpi_ic_search.png.flat",
+        "source": "C:\\Users\\Pan\\.gradle\\daemon\\8.9\\pylapp.smoothclicker.android.app-pngs-35:\\drawable-hdpi\\ic_search.png"
     }
 ]

@@ -3,15 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/lightBackground">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        app:title="@string/edit_action">
-    </androidx.appcompat.widget.Toolbar>
+        app:title="@string/edit_action"
+        app:titleTextColor="@color/white"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,110 +23,306 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/card_background">
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/action_name"/>
+                    android:text="@string/action_name"
+                    android:textSize="12sp"
+                    android:textColor="@color/secondaryText"
+                    android:layout_marginBottom="6dp"/>
 
                 <EditText
                     android:id="@+id/etName"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/input_background"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/card_background">
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/start_x"/>
-
-                <EditText
-                    android:id="@+id/etX"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:inputType="number"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/start_y"/>
-
-                <EditText
-                    android:id="@+id/etY"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:inputType="number"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/layoutEndCoords"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                    android:text="@string/coordinates"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginBottom="10dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="10dp">
 
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/end_x"/>
-
-                    <EditText
-                        android:id="@+id/etEndX"
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:inputType="number"/>
+                        android:orientation="vertical"
+                        android:layout_marginEnd="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/start_x"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondaryText"
+                            android:layout_marginBottom="4dp"/>
+
+                        <EditText
+                            android:id="@+id/etX"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:textColor="@color/colorBlack"
+                            android:background="@drawable/input_background"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/start_y"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondaryText"
+                            android:layout_marginBottom="4dp"/>
+
+                        <EditText
+                            android:id="@+id/etY"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:textColor="@color/colorBlack"
+                            android:background="@drawable/input_background"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutEndCoords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/dividerColor"
+                        android:layout_marginBottom="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="6dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/end_x"
+                                android:textSize="12sp"
+                                android:textColor="@color/secondaryText"
+                                android:layout_marginBottom="4dp"/>
+
+                            <EditText
+                                android:id="@+id/etEndX"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:textColor="@color/colorBlack"
+                                android:background="@drawable/input_background"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="6dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/end_y"
+                                android:textSize="12sp"
+                                android:textColor="@color/secondaryText"
+                                android:layout_marginBottom="4dp"/>
+
+                            <EditText
+                                android:id="@+id/etEndY"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:textColor="@color/colorBlack"
+                                android:background="@drawable/input_background"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/card_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/timing_settings"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginBottom="10dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="10dp">
 
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/end_y"/>
-
-                    <EditText
-                        android:id="@+id/etEndY"
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:inputType="number"/>
+                        android:orientation="vertical"
+                        android:layout_marginEnd="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/duration"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondaryText"
+                            android:layout_marginBottom="4dp"/>
+
+                        <EditText
+                            android:id="@+id/etDuration"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:textColor="@color/colorBlack"
+                            android:background="@drawable/input_background"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ms"
+                        android:textSize="14sp"
+                        android:textColor="@color/secondaryText"
+                        android:layout_gravity="bottom"
+                        android:paddingBottom="12dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutWaitTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wait_time"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondaryText"
+                            android:layout_marginBottom="4dp"/>
+
+                        <EditText
+                            android:id="@+id/etWaitTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:textColor="@color/colorBlack"
+                            android:background="@drawable/input_background"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ms"
+                        android:textSize="14sp"
+                        android:textColor="@color/secondaryText"
+                        android:layout_gravity="bottom"
+                        android:paddingBottom="12dp"/>
 
                 </LinearLayout>
 
@@ -134,71 +331,62 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="@drawable/card_background">
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/duration"/>
+                    android:text="@string/repeat_settings"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginBottom="10dp"/>
 
-                <EditText
-                    android:id="@+id/etDuration"
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:inputType="number"/>
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ms"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="6dp">
 
-            </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/repeat"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondaryText"
+                            android:layout_marginBottom="4dp"/>
 
-            <LinearLayout
-                android:id="@+id/layoutWaitTime"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                        <EditText
+                            android:id="@+id/etRepeat"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:textColor="@color/colorBlack"
+                            android:background="@drawable/input_background"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"/>
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/wait_time"/>
+                    </LinearLayout>
 
-                <EditText
-                    android:id="@+id/etWaitTime"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:inputType="number"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/times"
+                        android:textSize="14sp"
+                        android:textColor="@color/secondaryText"
+                        android:layout_gravity="bottom"
+                        android:paddingBottom="12dp"/>
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ms"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/repeat"/>
-
-                <EditText
-                    android:id="@+id/etRepeat"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:inputType="number"/>
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -210,23 +398,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="@color/white">
 
         <Button
             android:id="@+id/btnCancel"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_weight="1"
-            android:text="@string/cancel"/>
+            android:text="@string/cancel"
+            style="@style/Widget.Button.Secondary"
+            android:layout_marginEnd="6dp"/>
 
         <Button
             android:id="@+id/btnSave"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_weight="1"
             android:text="@string/save"
-            android:textColor="@color/white"
-            android:background="@color/colorPrimary"/>
+            style="@style/Widget.Button.Primary"
+            android:layout_marginStart="6dp"/>
 
     </LinearLayout>
 

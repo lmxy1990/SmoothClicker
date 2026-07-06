@@ -5,9 +5,13 @@
 -keep class pylapp.smoothclicker.android.SmoothClickerApplication { <init>(); }
 -keep class pylapp.smoothclicker.android.clickers.ServiceClicker { <init>(); }
 -keep class pylapp.smoothclicker.android.receivers.BRClicker { <init>(); }
+-keep class pylapp.smoothclicker.android.views.ActionEditActivity { <init>(); }
+-keep class pylapp.smoothclicker.android.views.ActionListActivity { <init>(); }
 -keep class pylapp.smoothclicker.android.views.ClickerActivity { <init>(); }
 -keep class pylapp.smoothclicker.android.views.CreditsActivity { <init>(); }
 -keep class pylapp.smoothclicker.android.views.IntroScreensActivity { <init>(); }
+-keep class pylapp.smoothclicker.android.views.MultiActionEditActivity { <init>(); }
+-keep class pylapp.smoothclicker.android.views.ScriptListActivity { <init>(); }
 -keep class pylapp.smoothclicker.android.views.SelectMultiPointsActivity { <init>(); }
 -keep class pylapp.smoothclicker.android.views.SettingsActivity { <init>(); }
 -keep class pylapp.smoothclicker.android.views.SplashScreenActivity { <init>(); }

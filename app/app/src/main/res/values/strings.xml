@@ -234,11 +234,23 @@
     <string name="script_renamed">Script renamed</string>
     <string name="script_deleted">Script deleted</string>
     <string name="action_count">%d actions</string>
+    <string name="category_hint">Category (optional)</string>
+    <string name="all_categories">All Categories</string>
+    <string name="select_category">Select Category</string>
+    <string name="import_script">Import</string>
+    <string name="export">Export</string>
+    <string name="export_success">Exported to %s</string>
+    <string name="export_failed">Export failed</string>
+    <string name="import_success">Import successful</string>
+    <string name="import_failed">Import failed</string>
 
     <!-- Action List -->
     <string name="play">Play</string>
     <string name="no_actions">No actions to play</string>
     <string name="script_playing">Script playing...</string>
+    <string name="script_finished">Script finished</string>
+    <string name="script_error">Script execution error</string>
+    <string name="executing_action">Executing action %1$d/%2$d: %3$s</string>
     <string name="click_desc">Click (%1$d,%2$d)</string>
     <string name="swipe_desc">Swipe (%1$d,%2$d) → (%3$d,%4$d)</string>
     <string name="multi_desc">Multi-touch actions</string>
@@ -250,6 +262,10 @@
     <string name="repeat">Repeat</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
+    <string name="coordinates">Coordinates</string>
+    <string name="timing_settings">Timing</string>
+    <string name="repeat_settings">Repeat</string>
+    <string name="times">times</string>
 
     <!-- Multi Action -->
     <string name="edit_multi_action">Edit Multi-action</string>

@@ -81,7 +81,8 @@ PLe/j;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 HSPLe/j;->i()Le/n;
 HSPLe/j;->getMenuInflater()Landroid/view/MenuInflater;
 HSPLe/j;->getResources()Landroid/content/res/Resources;
-HSPLe/j;->j()V
+PLe/j;->j()LS0/g;
+HSPLe/j;->k()V
 HSPLe/j;->onContentChanged()V
 PLe/j;->onDestroy()V
 PLe/j;->onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -160,10 +161,11 @@ HSPLe/S;-><clinit>()V
 HSPLe/S;-><init>(Landroid/app/Activity;Z)V
 PLe/S;->n()Z
 HSPLe/S;->A()Landroid/content/Context;
-HSPLe/S;->v0(Landroid/view/View;)V
+HSPLe/S;->x0(Landroid/view/View;)V
 HSPLe/S;->j0(Z)V
-HSPLe/S;->w0(Z)V
-HSPLe/S;->l0(Z)V
+HSPLe/S;->k0(Z)V
+HSPLe/S;->y0(Z)V
+HSPLe/S;->m0(Z)V
 Lj/d;
 HSPLj/d;-><init>(Landroid/content/Context;I)V
 HSPLj/d;->a(Landroid/content/res/Configuration;)V
@@ -458,7 +460,7 @@ HSPLl/v1;-><init>(Ll/w1;)V
 Ll/w1;
 HSPLl/w1;-><init>(Landroidx/appcompat/widget/Toolbar;Z)V
 HSPLl/w1;->a(I)V
-HSPLS0/g;->m0(Landroid/view/View;Ljava/lang/CharSequence;)V
+HSPLS0/g;->o0(Landroid/view/View;Ljava/lang/CharSequence;)V
 Ll/B1;
 Ll/D1;
 HSPLl/D1;-><clinit>()V

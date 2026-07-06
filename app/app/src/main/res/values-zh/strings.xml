@@ -64,19 +64,33 @@
     <string name="enter_name">请输入名称</string>
     <string name="rename">重命名</string>
     <string name="delete">删除</string>
+    <string name="ok">确定</string>
     <string name="rename_script">重命名脚本</string>
     <string name="delete_script">删除脚本</string>
     <string name="delete_script_confirm">确定要删除此脚本吗？</string>
     <string name="script_renamed">脚本已重命名</string>
     <string name="script_deleted">脚本已删除</string>
     <string name="action_count">%d个操作</string>
+    <string name="category_hint">分类（可选）</string>
+    <string name="all_categories">全部分类</string>
+    <string name="select_category">选择分类</string>
+    <string name="import_script">导入</string>
+    <string name="export">导出</string>
+    <string name="export_success">已导出到 %s</string>
+    <string name="export_failed">导出失败</string>
+    <string name="import_success">导入成功</string>
+    <string name="import_failed">导入失败</string>
 
     <string name="play">运行</string>
     <string name="no_actions">没有可运行的操作</string>
     <string name="script_playing">脚本运行中...</string>
+    <string name="script_finished">脚本运行完成</string>
+    <string name="script_error">脚本执行错误</string>
+    <string name="executing_action">正在执行操作 %d/%d: %s</string>
     <string name="click_desc">点击 (%1$d,%2$d)</string>
     <string name="swipe_desc">滑动 (%1$d,%2$d) → (%3$d,%4$d)</string>
     <string name="multi_desc">多指操作</string>
+    <string name="action_multi">多指</string>
 
     <string name="edit_action">编辑操作</string>
     <string name="action_name">名称</string>
@@ -84,6 +98,10 @@
     <string name="repeat">重复次数</string>
     <string name="save">保存</string>
     <string name="cancel">取消</string>
+    <string name="coordinates">坐标</string>
+    <string name="timing_settings">时间设置</string>
+    <string name="repeat_settings">重复设置</string>
+    <string name="times">次</string>
 
     <string name="edit_multi_action">编辑多指操作</string>
     <string name="add_sub_action">添加子操作</string>

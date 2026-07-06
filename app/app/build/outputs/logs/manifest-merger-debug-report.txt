@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:26:1-214:12
-INJECTED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:26:1-214:12
-INJECTED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:26:1-214:12
-INJECTED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:26:1-214:12
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:26:1-215:12
+INJECTED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:26:1-215:12
+INJECTED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:26:1-215:12
+INJECTED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:26:1-215:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Pan\.gradle\caches\8.9\transforms\26243ef55623e944fb88fadf658572c7\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.preference:preference:1.2.1] C:\Users\Pan\.gradle\caches\8.9\transforms\cc3302474512a7e091f58be035d46e4c\transformed\preference-1.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Pan\.gradle\caches\8.9\transforms\a377ea6370342db61e8e12cb62644509\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -87,8 +87,8 @@ ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:60:
 	android:name
 		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:60:22-77
 application
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:68:5-212:19
-INJECTED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:68:5-212:19
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:68:5-213:19
+INJECTED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:68:5-213:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Pan\.gradle\caches\8.9\transforms\26243ef55623e944fb88fadf658572c7\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Pan\.gradle\caches\8.9\transforms\26243ef55623e944fb88fadf658572c7\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Pan\.gradle\caches\8.9\transforms\215ecb5878c843171e494fa26264f74b\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
@@ -196,85 +196,87 @@ ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:128
 	android:name
 		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:129:13-53
 activity#pylapp.smoothclicker.android.views.ScriptListActivity
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:136:9-140:56
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:136:9-141:38
 	android:label
 		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:138:13-45
 	android:windowSoftInputMode
 		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:140:13-54
+	android:exported
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:141:13-36
 	android:theme
 		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:139:13-56
 	android:name
 		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:137:13-53
 activity#pylapp.smoothclicker.android.views.ActionListActivity
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:143:9-146:58
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:144:9-147:58
 	android:label
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:145:13-54
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:146:13-54
 	android:theme
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:146:13-56
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:147:13-56
 	android:name
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:144:13-53
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:145:13-53
 activity#pylapp.smoothclicker.android.views.ActionEditActivity
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:149:9-152:58
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:150:9-153:58
 	android:label
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:151:13-48
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:152:13-48
 	android:theme
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:152:13-56
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:153:13-56
 	android:name
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:150:13-53
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:151:13-53
 activity#pylapp.smoothclicker.android.views.MultiActionEditActivity
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:155:9-158:58
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:156:9-159:58
 	android:label
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:157:13-54
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:158:13-54
 	android:theme
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:158:13-56
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:159:13-56
 	android:name
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:156:13-58
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:157:13-58
 service#pylapp.smoothclicker.android.clickers.ServiceClicker
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:164:9-178:19
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:165:9-179:19
 	android:enabled
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:167:13-35
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:168:13-35
 	android:label
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:166:13-65
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:167:13-65
 	android:exported
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:168:13-36
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:169:13-36
 	android:name
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:165:13-52
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:166:13-52
 intent-filter#action:name:pylapp.smoothclicker.android.clickers.ServiceClicker.START
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:169:13-171:29
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:170:13-172:29
 action#pylapp.smoothclicker.android.clickers.ServiceClicker.START
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:170:17-101
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:171:17-101
 	android:name
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:170:25-98
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:171:25-98
 intent-filter#action:name:pylapp.smoothclicker.android.clickers.ServiceClicker.STOP
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:172:13-174:29
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:173:13-175:29
 action#pylapp.smoothclicker.android.clickers.ServiceClicker.STOP
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:173:17-100
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:174:17-100
 	android:name
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:173:25-97
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:174:25-97
 intent-filter#action:name:pylapp.smoothclicker.android.clickers.ServiceClicker.WAKEUP
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:175:13-177:29
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:176:13-178:29
 action#pylapp.smoothclicker.android.clickers.ServiceClicker.WAKEUP
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:176:17-102
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:177:17-102
 	android:name
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:176:25-99
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:177:25-99
 receiver#pylapp.smoothclicker.android.receivers.BRClicker
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:186:9-200:20
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:187:9-201:20
 	android:exported
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:188:13-36
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:189:13-36
 	android:name
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:187:13-48
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:188:13-48
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:189:13-191:29
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:190:13-192:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:190:17-78
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:191:17-78
 	android:name
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:190:25-76
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:191:25-76
 intent-filter#action:name:android.intent.action.ACTION_BATTERY_LOW
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:192:13-194:29
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:193:13-195:29
 action#android.intent.action.ACTION_BATTERY_LOW
-ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:193:17-82
+ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:194:17-82
 	android:name
-		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:193:25-80
+		ADDED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:194:25-80
 uses-sdk
 INJECTED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml

@@ -3,32 +3,64 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/lightBackground">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        app:title="@string/app_name">
-    </androidx.appcompat.widget.Toolbar>
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="8dp">
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp">
 
         <EditText
             android:id="@+id/etSearch"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_weight="1"
             android:hint="@string/search_hint"
             android:inputType="text"
-            android:drawableLeft="@drawable/ic_search"/>
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/tertiaryText"
+            android:background="@drawable/input_background"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnImport"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/import_script"
+            android:textSize="13sp"
+            style="@style/Widget.Button.Primary"
+            android:backgroundTint="@color/colorAccent"/>
 
     </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"
+        android:prompt="@string/select_category"
+        android:background="@drawable/input_background"/>
 
     <ListView
         android:id="@+id/lvScripts"
@@ -36,7 +68,10 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:divider="@null"
-        android:dividerHeight="0dp"/>
+        android:dividerHeight="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="4dp"
+        android:paddingBottom="80dp"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAdd"
@@ -45,6 +80,9 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
         android:src="@drawable/ic_add"
-        app:elevation="6dp"/>
+        android:backgroundTint="@color/colorPrimary"
+        android:tint="@color/white"
+        app:elevation="4dp"
+        app:fabSize="normal"/>
 
 </LinearLayout>

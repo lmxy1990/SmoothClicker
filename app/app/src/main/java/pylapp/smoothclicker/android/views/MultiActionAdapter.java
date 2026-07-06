@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import pylapp.smoothclicker.android.R;
@@ -38,13 +39,16 @@ public class MultiActionAdapter extends ArrayAdapter<MultiAction> {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.item_multi_action, parent, false);
         }
 
+        LinearLayout llIconContainer = convertView.findViewById(R.id.llIconContainer);
         ImageView ivIcon = convertView.findViewById(R.id.ivIcon);
         switch (action.type) {
             case MultiAction.TYPE_CLICK:
                 ivIcon.setImageResource(R.drawable.ic_click);
+                llIconContainer.setBackgroundResource(R.drawable.circle_click_background);
                 break;
             case MultiAction.TYPE_SWIPE:
                 ivIcon.setImageResource(R.drawable.ic_swipe);
+                llIconContainer.setBackgroundResource(R.drawable.circle_swipe_background);
                 break;
         }
 

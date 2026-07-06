@@ -1370,7 +1370,9 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color clickTypeColor
 color colorAccent
+color colorAccentLight
 color colorBlack
 color colorMisterGrey
 color colorPrimary
@@ -1419,13 +1421,17 @@ color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
 color dim_foreground_material_light
+color dividerColor
+color errorColor
 color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gray
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color lightBackground
+color lightGray
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2080,6 +2086,7 @@ color mtrl_textinput_disabled_color
 color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
+color multiTypeColor
 color notification_action_color_filter
 color notification_icon_bg_color
 color preference_fallback_accent_color
@@ -2098,14 +2105,19 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color successColor
+color surfaceBackground
+color swipeTypeColor
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color tertiaryText
 color tooltip_background_dark
 color tooltip_background_light
+color warningColor
 color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -3024,7 +3036,14 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable button_delete_background
+drawable button_primary_background
+drawable button_secondary_background
+drawable card_background
 drawable circle_background
+drawable circle_click_background
+drawable circle_multi_background
+drawable circle_swipe_background
 drawable clicks
 drawable credits_flag_en
 drawable credits_flag_fr
@@ -3049,6 +3068,7 @@ drawable ic_clear_black_24
 drawable ic_click
 drawable ic_clock_black_24dp
 drawable ic_delete
+drawable ic_drag
 drawable ic_expand_less
 drawable ic_expand_more
 drawable ic_keyboard_black_24dp
@@ -3060,6 +3080,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_multi
+drawable ic_script
 drawable ic_search
 drawable ic_search_black_24
 drawable ic_swipe
@@ -3068,6 +3089,7 @@ drawable icon_clean_points
 drawable indeterminate_static
 drawable indicator_active
 drawable indicator_inactive
+drawable input_background
 drawable json
 drawable logo_512
 drawable m3_avd_hide_password
@@ -3266,6 +3288,8 @@ id btnCancel
 id btnClearAll
 id btnDelete
 id btnDeleteAction
+id btnExport
+id btnImport
 id btnMoveDown
 id btnMoveUp
 id btnNext
@@ -3344,6 +3368,7 @@ id endToStart
 id enterAlways
 id enterAlwaysCollapsed
 id escape
+id etCategory
 id etDelay
 id etDuration
 id etEndX
@@ -3415,6 +3440,7 @@ id item_touch_helper_previous_elevation
 id ivActionIcon
 id ivArrow
 id ivDelete
+id ivDrag
 id ivExpand
 id ivIcon
 id ivSplashScreenLogo
@@ -3434,9 +3460,12 @@ id linear
 id list
 id listMode
 id list_item
+id llActionItem
+id llIconContainer
+id llItemRoot
+id llProgress
 id locale
 id ltr
-id lvActions
 id lvMultiActions
 id lvScripts
 id m3_side_sheet
@@ -3548,6 +3577,7 @@ id preferences_detail
 id preferences_header
 id preferences_sliding_pane_layout
 id pressed
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -3571,6 +3601,7 @@ id right_side
 id rounded
 id row_index_key
 id rtl
+id rvActions
 id sPointsToClick
 id sTypeOfStartDelayed
 id save_non_transition_alpha
@@ -3614,6 +3645,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id spCategory
 id spacer
 id special_effects_controller_view_tag
 id spinner
@@ -3700,6 +3732,7 @@ id tvDelay
 id tvDesc
 id tvEndlessRepeat
 id tvNotifOnClick
+id tvProgress
 id tvRepeat
 id tvRingOnClick
 id tvScriptName
@@ -3889,6 +3922,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_add_script
 layout dialog_multi_action_edit
 layout dialog_standalonemode
 layout expand_button
@@ -4036,6 +4070,7 @@ string action_type
 string add_action
 string add_script
 string add_sub_action
+string all_categories
 string all_cleared
 string androidx_startup
 string app_author
@@ -4061,6 +4096,7 @@ string call_notification_screening_text
 string cancel
 string cannot_move_down
 string cannot_move_up
+string category_hint
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -4068,6 +4104,7 @@ string clear_all
 string clear_text_end_icon_content_description
 string click_desc
 string coordinate_hint
+string coordinates
 string copy
 string delay
 string delay_desc
@@ -4094,12 +4131,19 @@ string error_not_implemented
 string error_nothing_to_open_file
 string error_nothing_to_open_json
 string error_su_missing
+string executing_action
 string expand_button_title
+string export
+string export_failed
+string export_success
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string import_failed
+string import_script
+string import_success
 string info_export_fail
 string info_export_success
 string info_import_fail
@@ -4304,9 +4348,12 @@ string preference_copied
 string rename
 string rename_script
 string repeat
+string repeat_settings
 string save
 string script_added
 string script_deleted
+string script_error
+string script_finished
 string script_name_hint
 string script_playing
 string script_renamed
@@ -4316,6 +4363,7 @@ string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
 string searchview_navigation_content_description
 string select_action_first
+string select_category
 string service_label_serviceclicker
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
@@ -4334,6 +4382,8 @@ string status_bar_notification_info_overflow
 string su_grant_error_prefix
 string summary_collapsed_preference_list
 string swipe_desc
+string times
+string timing_settings
 string v7_preference_off
 string v7_preference_on
 string wait_time
@@ -5214,6 +5264,9 @@ style Widget_AppCompat_TextView
 style Widget_AppCompat_TextView_SpinnerItem
 style Widget_AppCompat_Toolbar
 style Widget_AppCompat_Toolbar_Button_Navigation
+style Widget_Button_Primary
+style Widget_Button_Secondary
+style Widget_Card
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style Widget_Design_AppBarLayout

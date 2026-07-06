@@ -120,6 +120,7 @@
     <string name="action_import">导入</string>
     <string name="action_list_title">操作列表</string>
     <string name="action_long_click">长按</string>
+    <string name="action_multi">多指</string>
     <string name="action_name">名称</string>
     <string name="action_next">下一步</string>
     <string name="action_settings">设置</string>
@@ -130,6 +131,7 @@
     <string name="add_action">添加操作</string>
     <string name="add_script">添加脚本</string>
     <string name="add_sub_action">添加子操作</string>
+    <string name="all_categories">全部分类</string>
     <string name="all_cleared">已清空所有操作</string>
     <string name="app_intro">Introduction</string>
     <string name="app_name">自动点击器</string>
@@ -139,9 +141,11 @@
     <string name="cancel">取消</string>
     <string name="cannot_move_down">无法下移</string>
     <string name="cannot_move_up">无法上移</string>
+    <string name="category_hint">分类（可选）</string>
     <string name="clear_all">清空所有</string>
     <string name="click_desc">点击 (%1$d,%2$d)</string>
     <string name="coordinate_hint">0</string>
+    <string name="coordinates">坐标</string>
     <string name="credits_developer">开发者</string>
     <string name="credits_libraries">使用的库</string>
     <string name="credits_license">许可证</string>
@@ -159,6 +163,13 @@
     <string name="end_x">终点X</string>
     <string name="end_y">终点Y</string>
     <string name="enter_name">请输入名称</string>
+    <string name="executing_action">正在执行操作 %d/%d: %s</string>
+    <string name="export">导出</string>
+    <string name="export_failed">导出失败</string>
+    <string name="export_success">已导出到 %s</string>
+    <string name="import_failed">导入失败</string>
+    <string name="import_script">导入</string>
+    <string name="import_success">导入成功</string>
     <string name="intro_screen_1_desc">这是一个可以在您的设备上自动点击的应用。请阅读以下说明以了解如何使用它。</string>
     <string name="intro_screen_1_title">欢迎使用自动点击器</string>
     <string name="intro_screen_2_desc">此应用需要Root权限才能在屏幕上模拟点击。请确保您的设备已Root。</string>
@@ -192,6 +203,7 @@
     <string name="notification_text_click_process">点击进程正在运行中...</string>
     <string name="notification_text_clicking">正在点击 (%1$d,%2$d)</string>
     <string name="notification_title_click_process">点击进程</string>
+    <string name="ok">确定</string>
     <string name="permission_read_external_storage_summary">应用需要此权限从专用文件夹读取配置文件</string>
     <string name="permission_read_external_storage_title">外部存储读取权限</string>
     <string name="permission_write_external_storage_summary">应用需要此权限在专用文件夹中写入配置文件</string>
@@ -200,14 +212,18 @@
     <string name="rename">重命名</string>
     <string name="rename_script">重命名脚本</string>
     <string name="repeat">重复次数</string>
+    <string name="repeat_settings">重复设置</string>
     <string name="save">保存</string>
     <string name="script_added">脚本已添加</string>
     <string name="script_deleted">脚本已删除</string>
+    <string name="script_error">脚本执行错误</string>
+    <string name="script_finished">脚本运行完成</string>
     <string name="script_name_hint">输入脚本名称</string>
     <string name="script_playing">脚本运行中...</string>
     <string name="script_renamed">脚本已重命名</string>
     <string name="search_hint">搜索脚本...</string>
     <string name="select_action_first">请先选择一个操作</string>
+    <string name="select_category">选择分类</string>
     <string name="service_label_serviceclicker">SmoothClicker service</string>
     <string name="settings_category_app">应用设置</string>
     <string name="settings_category_click">点击设置</string>
@@ -229,5 +245,7 @@
     <string name="start_x">起点X</string>
     <string name="start_y">起点Y</string>
     <string name="swipe_desc">滑动 (%1$d,%2$d) → (%3$d,%4$d)</string>
+    <string name="times">次</string>
+    <string name="timing_settings">时间设置</string>
     <string name="wait_time">等待时间</string>
 </resources>

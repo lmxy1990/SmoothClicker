@@ -1,11 +1,13 @@
 package pylapp.smoothclicker.android.views;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import pylapp.smoothclicker.android.R;
 import pylapp.smoothclicker.android.database.Script;
@@ -46,6 +48,18 @@ public class ScriptListAdapter extends ArrayAdapter<Script> {
         TextView tvCreatedAt = convertView.findViewById(R.id.tvCreatedAt);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
         tvCreatedAt.setText(sdf.format(new Date(script.createdAt)));
+
+        View llItemRoot = convertView.findViewById(R.id.llItemRoot);
+        llItemRoot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, "Clicked: " + script.name, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext, ActionListActivity.class);
+                intent.putExtra("script_id", script.id);
+                intent.putExtra("script_name", script.name);
+                mContext.startActivity(intent);
+            }
+        });
 
         return convertView;
     }
