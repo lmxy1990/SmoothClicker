@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="credits_descriptions">
+        <item>Автор: pylapp</item>
+        <item>Иконки сделаны: Freepik из www.flaticon.com</item>
+        <item>Библиотеку сделал: Saurabh Arora</item>
+        <item>Библиотеку сделал: kyleduo</item>
+        <item>Библиотеку сделал: Paolo Rotolo</item>
+        <item>Библиотеку сделал: Iiro Krankka</item>
+        <item>Библиотеку сделал: Pavel Sikun</item>
+        <item>Библиотеку сделал: Karumi</item>
+        <item>Иконки сделаны: Freepik из www.flaticon.com</item>
+        <item>Иконки сделаны: Elegant Темы из www.flaticon.com</item>
+        <item>Иконки сделаны: Yannick из www.flaticon.com</item>
+        <item>Иконки сделаны: Vaadin из www.flaticon.com</item>
+        <item>Иконки сделаны: Madebyoliver из www.flaticon.com</item>
+    </string-array>
+    <string-array name="credits_labels">
+        <item>Smooth Clicker</item>
+        <item>Logo de l\'application</item>
+        <item>Material Arc Menu</item>
+        <item>SwitchButton</item>
+        <item>AppIntro</item>
+        <item>Swipe Selector</item>
+        <item>Material SeekBar Preference</item>
+        <item>Dexter</item>
+        <item>Иконки</item>
+        <item>Иконки</item>
+        <item>Иконки</item>
+        <item>Иконки</item>
+        <item>Иконки</item>
+    </string-array>
+    <string-array name="credits_licenses">
+        <item>Лицензия MIT</item>
+        <item>Лицензия Flaticon Basic</item>
+        <item>Лицензия Apache v2</item>
+        <item>Лицензия Apache v2</item>
+        <item>Лицензия Apache v2</item>
+        <item>Лицензия Apache v2</item>
+        <item>Лицензия Apache v2</item>
+        <item>Лицензия Apache v2</item>
+        <item>Лицензия Flaticon Basic</item>
+        <item>Лицензия CC 3.0 BY</item>
+        <item>Лицензия CC 3.0 BY</item>
+        <item>Лицензия CC 3.0 BY</item>
+        <item>Лицензия Flaticon Basic</item>
+    </string-array>
+    <string-array name="credits_urls">
+        <item>https://github.com/pylapp/SmoothClicker</item>
+        <item>http://www.flaticon.com/free-icon/small-monkey-with-long-tail_28726</item>
+        <item>https://github.com/saurabharora90/MaterialArcMenu</item>
+        <item>https://github.com/kyleduo/SwitchButton</item>
+        <item>https://github.com/PaoloRotolo/AppIntro</item>
+        <item>https://github.com/roughike/SwipeSelector</item>
+        <item>https://github.com/MrBIMC/MaterialSeekBarPreference</item>
+        <item>https://github.com/Karumi/Dexter</item>
+        <item>http://www.flaticon.com/authors/freepik</item>
+        <item>http://www.flaticon.com/authors/elegant-themes</item>
+        <item>http://www.flaticon.com/authors/yannick</item>
+        <item>http://www.flaticon.com/authors/vaadin</item>
+        <item>http://www.flaticon.com/authors/madebyoliver</item>
+    </string-array>
+    <string-array name="introscreen_summaries">
+        <item>Добро пожаловать в Smooth Clicker!</item>
+        <item>Вам нужен рутованный смартфон что-бы использовать приложенние</item>
+        <item>Определите несколько кликов, что бы запустить процесс… </item>
+        <item>… и настройте процесс с уведомлениями, вибрацией и тд.</item>
+        <item>Некоторые JSON файлы могут быть для настройки конфига процесса тапов.</item>
+        <item>Автоматический режим может начать процесс тапов используя только JSON Файл для конфига.</item>
+        <item>Автоматический режим может так же начать процесс тапов в зависимости от картинки на экране.</item>
+        <item>Smooth Clicker полностью бесплатное ПО с открытым исходным кодом!</item>
+    </string-array>
+    <string-array name="introscreen_titles">
+        <item>Эй!</item>
+        <item>Рут</item>
+        <item>Клики</item>
+        <item>Уведомления</item>
+        <item>Настройки</item>
+        <item>Автоматический</item>
+        <item>Распознание экрана</item>
+        <item>Рожден что бы быть свободным</item>
+    </string-array>
+    <string-array name="standalone_mode_descriptions">
+        <item>Использовать два JSON файла, что-бы настроить процесс тапов</item>
+        <item>Использовать два JSON файла и захват экрана, что-бы настроить и запустить процесс кликов</item>
+    </string-array>
+    <string-array name="standalone_mode_titles">
+        <item>JSON файлы</item>
+        <item>JSON файлы и загрузка вместе с экраном</item>
+    </string-array>
+    <string-array name="thanks_flags">
+        <item>RU</item>
+        <item>IT</item>
+    </string-array>
+    <string-array name="thanks_labels">
+        <item>перевод</item>
+        <item>перевод</item>
+    </string-array>
+    <string-array name="thanks_whos">
+        <item>Артем Дементьев</item>
+        <item>fuomag9</item>
+    </string-array>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d новое уведомление</item>
+    <item quantity="few">%d новых уведомления</item>
+    <item quantity="many">%d новых уведомлений</item>
+    <item quantity="other">%d нового уведомления</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Перейти на главный экран"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Перейти вверх"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Ещё"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Готово"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Показать все"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Выберите приложение"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"ВЫКЛ"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"ВКЛ"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl +"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"Delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"Ввод"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Fn +"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta +"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift +"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"Пробел"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym +"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Меню +"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Введите запрос"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Удалить запрос"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Поисковый запрос"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Поиск"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Отправить запрос"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Голосовой поиск"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Поделиться с помощью"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Поделиться с помощью <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Свернуть"</string>
+    <string name="action_clean_all">Сбросить значения и удалить выбранные точки</string>
+    <string name="action_clean_points">Удалить выбранные точки</string>
+    <string name="action_configuration">Конфиг</string>
+    <string name="action_exit">Выход</string>
+    <string name="action_export">Экпортировать в JSON Файл</string>
+    <string name="action_import">Импортировать из JSON файла</string>
+    <string name="action_settings">Предпочтения</string>
+    <string name="action_standalone">Автоматический режим</string>
+    <string name="app_author">https://twitter.com/pylapp</string>
+    <string name="app_intro">Добро пожаловать в Smooth Clicker</string>
+    <string name="app_name">Smooth Clicker</string>
+    <string name="app_name_standalone">Smooth Clicker (автоматический)</string>
+    <string name="app_sharedUserId">pylapp.smoothclicker.android.sharedUserId</string>
+    <string name="app_sharedUserLabel">ID to access to the Smooth Clicker\'s world</string>
+    <string name="bottomsheet_action_collapse">Свернуть нижний экран</string>
+    <string name="bottomsheet_action_expand">Развернуть нижний экран</string>
+    <string name="bottomsheet_action_expand_halfway">Развернуть наполовину</string>
+    <string name="bottomsheet_drag_handle_clicked">Двойное нажатие на маркер перемещения</string>
+    <string name="bottomsheet_drag_handle_content_description">Маркер перемещения</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"Ответить"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Видео"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"Отклонить"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"Завершить"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"Входящий вызов"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Текущий вызов"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"Фильтрация входящего вызова"</string>
+    <string name="character_counter_content_description">Введено символов: %1$d из %2$d</string>
+    <string name="character_counter_overflowed_content_description">Превышено ограничение на количество символов (%1$d из %2$d)</string>
+    <string name="clear_text_end_icon_content_description">Очистить текстовое поле</string>
+    <string msgid="6083905920877235314" name="copy">"Копировать"</string>
+    <string name="dialog_negative_button">Отмена</string>
+    <string name="dialog_positive_button">Ок</string>
+    <string name="error_a11y_label">Ошибка: недопустимое значение</string>
+    <string name="error_icon_content_description">Ошибка</string>
+    <string name="error_message_no_click_defined">¯\\_(ツ)_/¯ Нету выбранных кликов</string>
+    <string name="error_message_su_not_granted">Права суперпользователя не получены x-(</string>
+    <string name="error_message_was_not_working">(－‸ლ) Процесс не запущен</string>
+    <string name="error_not_implemented">Исчо не реализовано!</string>
+    <string name="error_nothing_to_open_file">Упс, нечем открыть этот файл</string>
+    <string name="error_nothing_to_open_json">Упс, нечем открыть .json файл</string>
+    <string name="error_su_missing">У вас есть рут права что бы использовать приложение? Это важно</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Дополнительно"</string>
+    <string name="exposed_dropdown_menu_content_description">Показать раскрывающееся меню</string>
+    <string name="icon_content_description">Значок диалогового окна</string>
+    <string name="info_export_fail">Экспортирование провалено</string>
+    <string name="info_export_success">Экспортирование завершено</string>
+    <string name="info_import_fail">Импортирование провалено</string>
+    <string name="info_import_success">Импортирование завершено</string>
+    <string name="info_message_invite_new_points">Нажмите на экран что-бы выбрать точку, а потом вернуться назад</string>
+    <string name="info_message_invite_new_random_points">Долгое нажатие на экран что бы выбрать рандомную точку и вернуться назад</string>
+    <string name="info_message_new_point">Выбрать новые точки на экране</string>
+    <string name="info_message_request_su">Запросить доступ суперюзера</string>
+    <string name="info_message_start">Сохранить конфиг и начать процесс</string>
+    <string name="info_message_stop">Остановить все процессы</string>
+    <string name="info_message_su_granted">Права суперпользователя получены! :-)</string>
+    <string name="info_standalone_activated">Автоматический режим активирован</string>
+    <string name="info_standalone_disactivated">Автоматический режим деактивирован</string>
+    <string name="item_view_role_description">Вкладка</string>
+    <string name="material_clock_toggle_content_description">Выберите AM (до полудня) или PM (после полудня)</string>
+    <string name="material_hour_24h_suffix">%1$s ч.</string>
+    <string name="material_hour_selection">Выберите час</string>
+    <string name="material_hour_suffix">%1$s ч.</string>
+    <string name="material_minute_selection">Выберите минуты</string>
+    <string name="material_minute_suffix">%1$s мин.</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_clock_mode_description">Чтобы ввести время, перейдите в режим часов.</string>
+    <string name="material_timepicker_hour">Час</string>
+    <string name="material_timepicker_minute">Минуты</string>
+    <string name="material_timepicker_pm">PM</string>
+    <string name="material_timepicker_select_time">Выбор времени</string>
+    <string name="material_timepicker_text_input_mode_description">Чтобы ввести время, перейдите в режим ввода текста.</string>
+    <string name="message_confirm_exit_content">Вы хотите выйти из приложения</string>
+    <string name="message_confirm_exit_label">Выход</string>
+    <string name="message_reinit_config">Очистить… </string>
+    <string name="mtrl_badge_numberless_content_description">Новое уведомление</string>
+    <string name="mtrl_checkbox_state_description_checked">Флажок установлен.</string>
+    <string name="mtrl_checkbox_state_description_indeterminate">Флажки установлены частично.</string>
+    <string name="mtrl_checkbox_state_description_unchecked">Флажок не установлен.</string>
+    <string name="mtrl_chip_close_icon_content_description">Удалить \"%1$s\"</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">Новых уведомлений больше %1$d</string>
+    <string name="mtrl_picker_a11y_next_month">Перейти к следующему месяцу</string>
+    <string name="mtrl_picker_a11y_prev_month">Перейти к предыдущему месяцу</string>
+    <string name="mtrl_picker_announce_current_range_selection">Выбранная дата начала: %1$s. Выбранная дата окончания: %2$s.</string>
+    <string name="mtrl_picker_announce_current_selection">Выбранный элемент: %1$s</string>
+    <string name="mtrl_picker_announce_current_selection_none">нет</string>
+    <string name="mtrl_picker_cancel">Отмена</string>
+    <string name="mtrl_picker_confirm">ОК</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Выберите дату</string>
+    <string name="mtrl_picker_date_header_unselected">Выбранная дата</string>
+    <string name="mtrl_picker_day_of_week_column_header">%1$s</string>
+    <string name="mtrl_picker_end_date_description">Дата окончания: %1$s</string>
+    <string name="mtrl_picker_invalid_format">Недействительный формат.</string>
+    <string name="mtrl_picker_invalid_format_example">Пример: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Используйте: %1$s</string>
+    <string name="mtrl_picker_invalid_range">Недопустимый диапазон.</string>
+    <string name="mtrl_picker_navigate_to_current_year_description">Перейти к текущему году: %1$d</string>
+    <string name="mtrl_picker_navigate_to_year_description">Перейти к %1$d году</string>
+    <string name="mtrl_picker_out_of_range">Вне диапазона: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Дата начала – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – дата окончания</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">Выберите диапазон дат</string>
+    <string name="mtrl_picker_range_header_unselected">Дата начала – дата окончания</string>
+    <string name="mtrl_picker_save">Сохранить</string>
+    <string name="mtrl_picker_start_date_description">Дата начала: %1$s</string>
+    <string name="mtrl_picker_text_input_date_hint">Дата</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">Дата окончания</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Дата начала</string>
+    <string name="mtrl_picker_text_input_day_abbr">д</string>
+    <string name="mtrl_picker_text_input_month_abbr">м</string>
+    <string name="mtrl_picker_text_input_year_abbr">г</string>
+    <string name="mtrl_picker_today_description">Сегодня: %1$s</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Перейти в режим выбора дней</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Нажмите, чтобы перейти к Календарю</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Перейти в режим ввода текста</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Нажмите, чтобы выбрать год</string>
+    <string name="mtrl_timepicker_cancel">Отмена</string>
+    <string name="mtrl_timepicker_confirm">ОК</string>
+    <string msgid="6573031135582639649" name="not_set">"Не указано"</string>
+    <string name="notif_content_text_click_made">Новый тап</string>
+    <string name="notif_content_text_clicks_on_going_app">Процесс кликов запущен (В приложении)… </string>
+    <string name="notif_content_text_clicks_on_going_service">Процесс кликов запущен (В сервисе)… </string>
+    <string name="notif_content_text_clicks_on_going_standalone">Процесс кликов щапущен (автоматически)…</string>
+    <string name="notif_content_text_clicks_over">Процесс кликов завершен</string>
+    <string name="notif_content_text_clicks_stop">Процесс кликов остановлен</string>
+    <string name="notif_content_text_countdown">Запуск через:</string>
+    <string name="notif_content_text_su_granted">Рут права получены</string>
+    <string name="notif_content_text_watch_over">Вотч процесс остановлен</string>
+    <string name="notif_content_title">Smooth Clicker</string>
+    <string name="password_toggle_content_description">Показать пароль</string>
+    <string name="permission_read_external_storage_summary">Это разрешение нужно, что-бы читать конфиги</string>
+    <string name="permission_read_external_storage_title">EXTERNAL STORAGE READ разрешение</string>
+    <string name="permission_write_external_storage_summary">Это разрешение нужно, что-бы записывать конфиги</string>
+    <string name="permission_write_external_storage_title">EXTERNAL STORAGE WRITE разрешение</string>
+    <string name="pref_about_subtitle">Smooth Clicker</string>
+    <string name="pref_about_summary">Нажмите, что-бы получить больше</string>
+    <string name="pref_about_title">О приложении</string>
+    <string name="pref_about_version_app_summary">Написано pylapp - Лицензия MIT</string>
+    <string name="pref_about_version_app_title">Smooth Clicker</string>
+    <string name="pref_about_version_title">Версия</string>
+    <string name="pref_app_files">Хранилище</string>
+    <string name="pref_app_files_config_content">Чтение</string>
+    <string name="pref_app_files_config_name">Файлы, содержащие конфиг</string>
+    <string name="pref_app_files_config_title">Конфиг</string>
+    <string name="pref_app_files_points_content">Чтение</string>
+    <string name="pref_app_files_points_name">Файлы, содержащие точки</string>
+    <string name="pref_app_files_points_title">Точки</string>
+    <string name="pref_app_files_summary">Нажмите, что бы управлять используемыми файлами</string>
+    <string name="pref_app_files_title">Файлы, используемые приложением </string>
+    <string name="pref_app_files_trigger_content">Чтение</string>
+    <string name="pref_app_files_trigger_name">Файл изображения, который запустит процесс</string>
+    <string name="pref_app_files_trigger_title">Триггер изображения</string>
+    <string name="pref_app_files_unlock_content">Чтение</string>
+    <string name="pref_app_files_unlock_name">Файлы, содержащие разблокировку скрипта</string>
+    <string name="pref_app_files_unlock_title">Разблокировать скрипт</string>
+    <string name="pref_chainfire_url">https://www.chainfire.eu/</string>
+    <string name="pref_credits_title">Авторы</string>
+    <string name="pref_heimdall_url">https://doc.ubuntu-fr.org/heimdall</string>
+    <string name="pref_key_credit_summary">Нажмите сюда, что-бы показать лицензии</string>
+    <string name="pref_key_credit_title">Это приложение использует контет третьих лиц</string>
+    <string name="pref_key_forcescreenon_battery_summary">Когда экран выкллючен, включать его если не подключена зарядка.</string>
+    <string name="pref_key_forcescreenon_battery_title">Принудительное включение экрана</string>
+    <string name="pref_key_help_summary">Начать туториал</string>
+    <string name="pref_key_help_title">Помощь</string>
+    <string name="pref_key_root_chainfire_summary">Перейти на Chainfire что-бы получить больше информации по получению рута</string>
+    <string name="pref_key_root_chainfire_title">Chainfire XDA</string>
+    <string name="pref_key_root_heimdall_summary">Перейти на Heimdall что-бы рутануть ваш девайс с помощью Linux\'а</string>
+    <string name="pref_key_root_heimdall_title">Heimdall</string>
+    <string name="pref_key_root_odin_summary">Перейти на Odin что-бы рутануть ваш самсунг с помощью Windows</string>
+    <string name="pref_key_root_odin_title">Odin</string>
+    <string name="pref_key_unlockscript_summary">Использовать выделенный кастомный скрипт, который использует системные команды, что бы экран не выключался</string>
+    <string name="pref_key_unlockscript_title">ADB скрипт</string>
+    <string name="pref_key_wakelock_summary">Использовать вейклок что-бы экран не гас (Может жрать много батарейки)</string>
+    <string name="pref_key_wakelock_title">Вейклок</string>
+    <string name="pref_odin_url">http://odindownload.com/</string>
+    <string name="pref_picture_recognition_title">Распознование экрана</string>
+    <string name="pref_play_store_summary">Оценивайте приложение и комментируйте!</string>
+    <string name="pref_play_store_title">★ Google Play ★</string>
+    <string name="pref_root_subtitle">Как получить рут на мой девайс?</string>
+    <string name="pref_root_summary">Нажмите, что-бы получить больше</string>
+    <string name="pref_root_title">Рут</string>
+    <string name="pref_settings_prfrequency_summary">Чем больше время для захвата, тем медленнее система будет делать скриншоты девайса что-бы запустить триггер процесса кликов.</string>
+    <string name="pref_settings_prfrequency_title">Время для захвата</string>
+    <string name="pref_settings_prthreshold_summary">Чем больше порог, тем больше разница между триггером изображения и последним скриншотом.</string>
+    <string name="pref_settings_prthreshold_title">Порог</string>
+    <string name="pref_settings_shaketoclean_summary">Встряхните девайс что-бы очистить кеонфиг</string>
+    <string name="pref_settings_shaketoclean_title">Встряхните что бы очистить</string>
+    <string name="pref_settings_title">Основные натсройки</string>
+    <string name="pref_unlockscript_title">Разблокировка</string>
+    <string name="pref_wakescreenbattery_title">Пробуждение и батарейка</string>
+    <string msgid="6685851473431805375" name="preference_copied">"Текст \"<ns1:g id="SUMMARY">%1$s</ns1:g>\" скопирован в буфер обмена"</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Поиск"</string>
+    <string name="searchview_clear_text_content_description">Очистить текстовое поле</string>
+    <string name="searchview_navigation_content_description">Назад</string>
+    <string name="service_label_serviceclicker">Сервис кликера Smooth Clicker</string>
+    <string name="side_sheet_accessibility_pane_title">Боковая панель</string>
+    <string name="snackbar_action_dismiss">Отмена</string>
+    <string name="snackbar_see_config_file">Чтение</string>
+    <string name="splashscreen_description">Smooth Clicker</string>
+    <string name="standalone_bad_action">Упс …, Вы не выбрали правильное действие, что бы поставить триггер на это действие!</string>
+    <string name="standalone_init_config">Значения конфига уже выбраны …</string>
+    <string name="standalone_init_points">Точки для тапа выбраны …</string>
+    <string name="standalone_start_click_process">Автоматический режим запускается …</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">">999"</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"ВЫКЛ."</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"ВКЛ."</string>
+    <string name="warning_hazard_repeat_endless_content">Вы уверены что хотите включить бесконечный повтор? Эта операция может навредить вышему девайсу (Очень сложно выключить)</string>
+    <string name="warning_hazard_repeat_endless_no">Нет!</string>
+    <string name="warning_hazard_repeat_endless_title">Опасная операция</string>
+    <string name="warning_hazard_repeat_endless_yes">Да вообще пофиг, включайте :D</string>
+    <string name="widget_delay">Задержка</string>
+    <string name="widget_delayed_starts">Задержано</string>
+    <string name="widget_immediate_starts">Сейчас</string>
+    <string name="widget_no_points">Точки еще не выбраны</string>
+    <string name="widget_notifications">Уведомления</string>
+    <string name="widget_repeat">Повтор</string>
+    <string name="widget_repeat_endless">Бесконечный повтор</string>
+    <string name="widget_repeat_hint">… кол-во раз</string>
+    <string name="widget_sounds">Звук при каждом тапе</string>
+    <string name="widget_speed">Время перед каждым кликом</string>
+    <string name="widget_standalone_dialog_title">Автоматический режим</string>
+    <string name="widget_type_of_start">Старт</string>
+    <string name="widget_unit_time">Время</string>
+    <string name="widget_unit_time_h">Часы</string>
+    <string name="widget_unit_time_m">Минуты</string>
+    <string name="widget_unit_time_ms">Миллисекунды</string>
+    <string name="widget_unit_time_s">Секунды</string>
+    <string name="widget_vibrate_on_click">Вибрировать на каждом тапе</string>
+    <string name="widget_vibrate_on_start">Вибрировать на старте</string>
+    <string name="widget_xy_coordinates">Точки для того что-бы тапать</string>
+</resources>

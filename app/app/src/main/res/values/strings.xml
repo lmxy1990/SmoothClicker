@@ -206,5 +206,7 @@
     <string name="snackbar_see_config_file">Read</string>
     <string name="dialog_negative_button">Cancel</string>
     <string name="dialog_positive_button">OK</string>
+    <string name="su_grant_error_prefix">An error occurs during SU grant : </string>
+    <string name="easter_egg_message">✿✿✿✿ ʕ •ᴥ•ʔ/ ︻デ═一 Hotter Than Hell !</string>
 
 </resources>

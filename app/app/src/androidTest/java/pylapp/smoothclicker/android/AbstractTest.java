@@ -25,8 +25,8 @@
 
 package pylapp.smoothclicker.android;
 
-import android.support.test.InstrumentationRegistry;
-import android.support.test.uiautomator.UiDevice;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.uiautomator.UiDevice;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

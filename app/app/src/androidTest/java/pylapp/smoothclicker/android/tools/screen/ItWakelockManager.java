@@ -25,7 +25,7 @@
 
 package pylapp.smoothclicker.android.tools.screen;
 
-import android.support.test.InstrumentationRegistry;
+import androidx.test.platform.app.InstrumentationRegistry;
 
 import org.junit.After;
 import org.junit.Before;

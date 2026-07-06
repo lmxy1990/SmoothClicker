@@ -1,0 +1,355 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3    MIT License
+4
+5    Copyright (c) 2016  Pierre-Yves Lapersonne (Mail: dev@pylapersonne.info)
+6
+7    Permission is hereby granted, free of charge, to any person obtaining a copy
+8    of this software and associated documentation files (the "Software"), to deal
+9    in the Software without restriction, including without limitation the rights
+10    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+11    copies of the Software, and to permit persons to whom the Software is
+12    furnished to do so, subject to the following conditions:
+13
+14    The above copyright notice and this permission notice shall be included in all
+15    copies or substantial portions of the Software.
+16
+17    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+18    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+19    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+20    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+21    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+22    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+23    SOFTWARE.
+24-->
+25<!-- ✿✿✿✿ ʕ •ᴥ•ʔ/ ︻デ═一 -->
+26<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+27    package="pylapp.smoothclicker.android"
+28    android:sharedUserId="@string/app_sharedUserId"
+29    android:sharedUserLabel="@string/app_sharedUserLabel"
+30    android:versionCode="35"
+31    android:versionName="2.2.0 - Jelly Bean" >
+32
+33    <uses-sdk
+34        android:minSdkVersion="19"
+35        android:targetSdkVersion="34" />
+36
+37    <!-- *********** -->
+38    <!-- Permissions -->
+39    <!-- *********** -->
+40
+41
+42    <!-- To be SU -->
+43    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+43-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:37:5-75
+43-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:37:22-72
+44
+45    <!--
+46     These permissions are NORMAL permissions, so no need to ask grant for them
+47     See: https://developer.android.com/guide/topics/security/permissions.html#normal-dangerous
+48     See: https://developer.android.com/guide/topics/security/normal-permissions.html
+49    -->
+50    <!-- To make the device vibrate (here on each click or on start if needed) -->
+51    <uses-permission android:name="android.permission.VIBRATE" />
+51-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:46:5-66
+51-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:46:22-63
+52    <!-- To use wake locks to force the screen to be always on -->
+53    <uses-permission android:name="android.permission.WAKE_LOCK" />
+53-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:48:5-68
+53-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:48:22-65
+54    <!-- &lt;!&ndash; To start the service when the boot of the device is done &ndash;&gt; -->
+55    <!-- <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> -->
+56
+57
+58    <!--
+59     These permissions are DANGEROUS permissions, so we need to ask grant for them
+60     See: https://developer.android.com/guide/topics/security/permissions.html#normal-dangerous
+61    -->
+62    <!-- To put the JSON files to the external storage -->
+63    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+63-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:58:5-80
+63-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:58:22-78
+64    <!-- To get the JSON files from the external storage -->
+65    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+65-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:60:5-80
+65-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:60:22-77
+66
+67    <permission
+67-->[androidx.core:core:1.13.0] C:\Users\Pan\.gradle\caches\8.9\transforms\725b73459002260cbbf475c929f61a9f\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+68        android:name="pylapp.smoothclicker.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+68-->[androidx.core:core:1.13.0] C:\Users\Pan\.gradle\caches\8.9\transforms\725b73459002260cbbf475c929f61a9f\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+69        android:protectionLevel="signature" />
+69-->[androidx.core:core:1.13.0] C:\Users\Pan\.gradle\caches\8.9\transforms\725b73459002260cbbf475c929f61a9f\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+70
+71    <uses-permission android:name="pylapp.smoothclicker.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- ********************* -->
+71-->[androidx.core:core:1.13.0] C:\Users\Pan\.gradle\caches\8.9\transforms\725b73459002260cbbf475c929f61a9f\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+71-->[androidx.core:core:1.13.0] C:\Users\Pan\.gradle\caches\8.9\transforms\725b73459002260cbbf475c929f61a9f\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+72    <!-- The SmoothClicker app -->
+73    <!-- ********************* -->
+74    <application
+74-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:68:5-187:19
+75        android:name="pylapp.smoothclicker.android.SmoothClickerApplication"
+75-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:69:9-77
+76        android:allowBackup="true"
+76-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:70:9-35
+77        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+77-->[androidx.core:core:1.13.0] C:\Users\Pan\.gradle\caches\8.9\transforms\725b73459002260cbbf475c929f61a9f\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+78        android:debuggable="true"
+79        android:extractNativeLibs="true"
+80        android:icon="@drawable/logo_512"
+80-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:71:9-42
+81        android:label="@string/app_name"
+81-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:72:9-41
+82        android:supportsRtl="true"
+82-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:73:9-35
+83        android:theme="@style/AppTheme" >
+83-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:74:9-40
+84
+85        <!-- ********** -->
+86        <!-- Activities -->
+87        <!-- ********** -->
+88
+89
+90        <!-- The splash screen -->
+91        <activity
+91-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:82:9-91:20
+92            android:name="pylapp.smoothclicker.android.views.SplashScreenActivity"
+92-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:83:13-55
+93            android:exported="true"
+93-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:85:13-36
+94            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
+94-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:84:13-80
+95            <intent-filter>
+95-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:86:13-89:29
+96                <action android:name="android.intent.action.MAIN" />
+96-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:87:17-69
+96-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:87:25-66
+97
+98                <category android:name="android.intent.category.LAUNCHER" />
+98-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:88:17-77
+98-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:88:27-74
+99            </intent-filter>
+100        </activity>
+101
+102        <!-- The intro screen -->
+103        <activity
+103-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:94:9-97:82
+104            android:name="pylapp.smoothclicker.android.views.IntroScreensActivity"
+104-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:95:13-55
+105            android:label="@string/app_intro"
+105-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:96:13-46
+106            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+106-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:97:13-80
+107
+108        <!-- The main activity of the app -->
+109        <activity
+109-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:100:9-111:20
+110            android:name="pylapp.smoothclicker.android.views.ClickerActivity"
+110-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:101:13-50
+111            android:exported="true"
+111-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:105:13-36
+112            android:label="@string/app_name"
+112-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:102:13-45
+113            android:theme="@style/AppTheme.NoActionBar"
+113-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:103:13-56
+114            android:windowSoftInputMode="stateHidden" >
+114-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:104:13-54
+115            <intent-filter>
+115-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:107:13-109:29
+116                <action android:name="android.intent.action.VIEW" />
+116-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:108:17-69
+116-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:108:25-66
+117            </intent-filter>
+118        </activity>
+119
+120        <!-- The credits activity displaying the licenses etc. -->
+121        <activity
+121-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:114:9-116:83
+122            android:name="pylapp.smoothclicker.android.views.CreditsActivity"
+122-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:115:13-50
+123            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+123-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:116:13-80
+124
+125        <!-- A translucent activity to help the user to select several points on its screen -->
+126        <activity
+126-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:119:9-121:56
+127            android:name="pylapp.smoothclicker.android.views.SelectMultiPointsActivity"
+127-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:120:13-60
+128            android:theme="@style/Theme.Transparent" />
+128-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:121:13-53
+129
+130        <!-- The settings activity -->
+131        <activity android:name="pylapp.smoothclicker.android.views.SettingsActivity" />
+131-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:124:9-125:54
+131-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:125:13-51
+132
+133        <!-- An activity to use with a remote tool / system / object to trigger the clicks -->
+134        <activity
+134-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:128:9-133:38
+135            android:name="pylapp.smoothclicker.android.views.StandaloneActivity"
+135-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:129:13-53
+136            android:exported="true"
+136-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:133:13-36
+137            android:label="@string/app_name_standalone"
+137-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:130:13-56
+138            android:screenOrientation="portrait"
+138-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:131:13-49
+139            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+139-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:132:13-64
+140
+141        <!-- ******** -->
+142        <!-- Services -->
+143        <!-- ******** -->
+144
+145        <service
+145-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:139:9-153:19
+146            android:name="pylapp.smoothclicker.android.clickers.ServiceClicker"
+146-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:140:13-52
+147            android:enabled="true"
+147-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:142:13-35
+148            android:exported="true"
+148-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:143:13-36
+149            android:label="@string/service_label_serviceclicker" >
+149-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:141:13-65
+150            <intent-filter>
+150-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:144:13-146:29
+151                <action android:name="pylapp.smoothclicker.android.clickers.ServiceClicker.START" />
+151-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:145:17-101
+151-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:145:25-98
+152            </intent-filter>
+153            <intent-filter>
+153-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:147:13-149:29
+154                <action android:name="pylapp.smoothclicker.android.clickers.ServiceClicker.STOP" />
+154-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:148:17-100
+154-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:148:25-97
+155            </intent-filter>
+156            <intent-filter>
+156-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:150:13-152:29
+157                <action android:name="pylapp.smoothclicker.android.clickers.ServiceClicker.WAKEUP" />
+157-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:151:17-102
+157-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:151:25-99
+158            </intent-filter>
+159        </service>
+160
+161        <!-- ********* -->
+162        <!-- Receivers -->
+163        <!-- ********* -->
+164
+165
+166        <!-- A receiver which can make clicks -->
+167        <receiver
+167-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:161:9-175:20
+168            android:name="pylapp.smoothclicker.android.receivers.BRClicker"
+168-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:162:13-48
+169            android:exported="true" >
+169-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:163:13-36
+170            <intent-filter>
+170-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:164:13-166:29
+171                <action android:name="android.intent.action.BOOT_COMPLETED" />
+171-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:165:17-78
+171-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:165:25-76
+172            </intent-filter>
+173            <intent-filter>
+173-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:167:13-169:29
+174                <action android:name="android.intent.action.ACTION_BATTERY_LOW" />
+174-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:168:17-82
+174-->D:\code_prompt\SmoothClicker\app\app\src\main\AndroidManifest.xml:168:25-80
+175            </intent-filter>
+176            <!--
+177            <intent-filter>
+178                <action android:name="android.intent.action.ACTION_BATTERY_OKAY"/>
+179            </intent-filter>
+180            -->
+181        </receiver>
+182
+183        <!-- &lt;!&ndash; A receiver which can start the click process when the device has its boot completed &ndash;&gt; -->
+184        <!-- <receiver -->
+185        <!-- android:name=".receivers.BRBootCompleted" -->
+186        <!-- android:enabled="false"> -->
+187        <!-- <intent-filter> -->
+188        <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+189        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+190        <!-- </intent-filter> -->
+191        <!-- </receiver> -->
+192
+193        <provider
+193-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Pan\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+194            android:name="androidx.startup.InitializationProvider"
+194-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Pan\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+195            android:authorities="pylapp.smoothclicker.android.androidx-startup"
+195-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Pan\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+196            android:exported="false" >
+196-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Pan\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+197            <meta-data
+197-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Pan\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+198                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+198-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Pan\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+199                android:value="androidx.startup" />
+199-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Pan\.gradle\caches\8.9\transforms\14dc0d53567746b48e46844fa2850a4a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+200            <meta-data
+200-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Pan\.gradle\caches\8.9\transforms\a4f04040ef347ad3b53f7c7b0136f655\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+201                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+201-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Pan\.gradle\caches\8.9\transforms\a4f04040ef347ad3b53f7c7b0136f655\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+202                android:value="androidx.startup" />
+202-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Pan\.gradle\caches\8.9\transforms\a4f04040ef347ad3b53f7c7b0136f655\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+203            <meta-data
+203-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+204                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+204-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+205                android:value="androidx.startup" />
+205-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+206        </provider>
+207
+208        <uses-library
+208-->[androidx.window:window:1.0.0] C:\Users\Pan\.gradle\caches\8.9\transforms\9eec1899b58dfad5a9f4b984dcfa8d6c\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+209            android:name="androidx.window.extensions"
+209-->[androidx.window:window:1.0.0] C:\Users\Pan\.gradle\caches\8.9\transforms\9eec1899b58dfad5a9f4b984dcfa8d6c\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+210            android:required="false" />
+210-->[androidx.window:window:1.0.0] C:\Users\Pan\.gradle\caches\8.9\transforms\9eec1899b58dfad5a9f4b984dcfa8d6c\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+211        <uses-library
+211-->[androidx.window:window:1.0.0] C:\Users\Pan\.gradle\caches\8.9\transforms\9eec1899b58dfad5a9f4b984dcfa8d6c\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+212            android:name="androidx.window.sidecar"
+212-->[androidx.window:window:1.0.0] C:\Users\Pan\.gradle\caches\8.9\transforms\9eec1899b58dfad5a9f4b984dcfa8d6c\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+213            android:required="false" />
+213-->[androidx.window:window:1.0.0] C:\Users\Pan\.gradle\caches\8.9\transforms\9eec1899b58dfad5a9f4b984dcfa8d6c\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+214
+215        <receiver
+215-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+216            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+216-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+217            android:directBootAware="false"
+217-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+218            android:enabled="true"
+218-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+219            android:exported="true"
+219-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+220            android:permission="android.permission.DUMP" >
+220-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+221            <intent-filter>
+221-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+222                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+222-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+222-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+223            </intent-filter>
+224            <intent-filter>
+224-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+225                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+225-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+225-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+226            </intent-filter>
+227            <intent-filter>
+227-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+228                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+228-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+228-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+229            </intent-filter>
+230            <intent-filter>
+230-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+231                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+231-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+231-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\Pan\.gradle\caches\8.9\transforms\6b1569793e95967ed6b3542c06506d3f\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+232            </intent-filter>
+233        </receiver>
+234    </application>
+235
+236</manifest>

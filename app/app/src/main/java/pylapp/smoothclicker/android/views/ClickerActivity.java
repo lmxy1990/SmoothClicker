@@ -905,7 +905,7 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
         } catch ( IOException e ){
             Logger.e(LOG_TAG, "Exception thrown during 'su' : " + e.getMessage());
             e.printStackTrace();
-            Toast.makeText(this, "An error occurs during SU grant : "+e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.su_grant_error_prefix)+e.getMessage(), Toast.LENGTH_LONG).show();
             String s = getString(R.string.error_su_missing);
             Toast.makeText(this, s, Toast.LENGTH_LONG).show();
         }
@@ -991,7 +991,7 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
                 EditText etDelay = (EditText) findViewById(R.id.etDelay);
                 etDelay.setEnabled(isChecked);
                 EditText etR = (EditText) findViewById(R.id.etRepeat);
-                if ( "666".equals(etR.getText().toString()) ) Toast.makeText(ClickerActivity.this, "✿✿✿✿ ʕ •ᴥ•ʔ/ ︻デ═一 Hotter Than Hell !", Toast.LENGTH_SHORT).show();
+                if ( "666".equals(etR.getText().toString()) ) Toast.makeText(ClickerActivity.this, getString(R.string.easter_egg_message), Toast.LENGTH_SHORT).show();
             }
         });
 
