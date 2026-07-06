@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorBlack">#1A1A1A</color>
-    <color name="colorPrimary">#2563EB</color>
-    <color name="colorPrimaryDark">#1D4ED8</color>
-    <color name="colorPrimaryLight">#3B82F6</color>
-    <color name="colorAccent">#8B5CF6</color>
-    <color name="colorAccentLight">#A78BFA</color>
-    <color name="colorMisterGrey">#9CA3AF</color>
-    <color name="colorTransparent">#402563EB</color>
-    <color name="white">#FFFFFF</color>
-    <color name="secondaryText">#6B7280</color>
-    <color name="tertiaryText">#9CA3AF</color>
-    <color name="lightBackground">#F9FAFB</color>
-    <color name="surfaceBackground">#FFFFFF</color>
-    <color name="gray">#9CA3AF</color>
-    <color name="lightGray">#E5E7EB</color>
-    <color name="dividerColor">#F3F4F6</color>
-    <color name="errorColor">#EF4444</color>
-    <color name="successColor">#10B981</color>
-    <color name="warningColor">#F59E0B</color>
+    <!-- Apple HIG-inspired color palette -->
+    <color name="colorBlack">#1d1d1f</color>
+    <color name="colorPrimary">#007aff</color>
+    <color name="colorPrimaryDark">#0064d6</color>
+    <color name="colorPrimaryLight">#2e8dff</color>
+    <color name="colorAccent">#5856d6</color>
+    <color name="colorAccentLight">#7c7aff</color>
+    <color name="colorMisterGrey">#8e8e93</color>
+    <color name="colorTransparent">#40007aff</color>
+    <color name="white">#ffffff</color>
+    <color name="secondaryText">#6e6e73</color>
+    <color name="tertiaryText">#8e8e93</color>
+    <color name="lightBackground">#f2f2f7</color>
+    <color name="surfaceBackground">#ffffff</color>
+    <color name="gray">#8e8e93</color>
+    <color name="lightGray">#e5e5ea</color>
+    <color name="dividerColor">#e5e5ea</color>
+    <color name="errorColor">#ff3b30</color>
+    <color name="successColor">#34c759</color>
+    <color name="warningColor">#ff9f0a</color>
 
-    <color name="clickTypeColor">#2563EB</color>
-    <color name="swipeTypeColor">#10B981</color>
-    <color name="multiTypeColor">#8B5CF6</color>
+    <!-- Action type accent colors -->
+    <color name="clickTypeColor">#007aff</color>
+    <color name="swipeTypeColor">#34c759</color>
+    <color name="multiTypeColor">#5856d6</color>
 </resources>
