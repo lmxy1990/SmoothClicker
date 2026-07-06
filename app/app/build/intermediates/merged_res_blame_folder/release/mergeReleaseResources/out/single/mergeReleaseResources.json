@@ -1,5 +1,13 @@
 [
     {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/layout_list_action_group.xml.flat",
+        "source": "pylapp.smoothclicker.android.app-main-40:/layout/list_action_group.xml"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable_circle_background.xml.flat",
+        "source": "pylapp.smoothclicker.android.app-main-40:/drawable/circle_background.xml"
+    },
+    {
         "merged": "pylapp.smoothclicker.android.app-release-39:/layout_content_clicker_notifications.xml.flat",
         "source": "pylapp.smoothclicker.android.app-main-40:/layout/content_clicker_notifications.xml"
     },
@@ -8,12 +16,24 @@
         "source": "pylapp.smoothclicker.android.app-main-40:/drawable-mdpi/open_sources.png"
     },
     {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-mdpi_ic_expand_more.png.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-mdpi/ic_expand_more.png"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/layout_activity_action_list.xml.flat",
+        "source": "pylapp.smoothclicker.android.app-main-40:/layout/activity_action_list.xml"
+    },
+    {
         "merged": "pylapp.smoothclicker.android.app-release-39:/layout_content_clicker_cards_multipoints.xml.flat",
         "source": "pylapp.smoothclicker.android.app-main-40:/layout/content_clicker_cards_multipoints.xml"
     },
     {
         "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-mdpi_notifications.png.flat",
         "source": "pylapp.smoothclicker.android.app-main-40:/drawable-mdpi/notifications.png"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/layout_list_action_child.xml.flat",
+        "source": "pylapp.smoothclicker.android.app-main-40:/layout/list_action_child.xml"
     },
     {
         "merged": "pylapp.smoothclicker.android.app-release-39:/drawable_indicator_inactive.xml.flat",
@@ -44,8 +64,20 @@
         "source": "pylapp.smoothclicker.android.app-main-40:/layout/content_clicker_delay.xml"
     },
     {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-hdpi_ic_expand_less.png.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-hdpi/ic_expand_less.png"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-anydpi-v21_ic_expand_more.xml.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-anydpi-v21/ic_expand_more.xml"
+    },
+    {
         "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-mdpi_credits_flag_en.png.flat",
         "source": "pylapp.smoothclicker.android.app-main-40:/drawable-mdpi/credits_flag_en.png"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-mdpi_ic_expand_less.png.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-mdpi/ic_expand_less.png"
     },
     {
         "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-mdpi_json.png.flat",
@@ -56,12 +88,20 @@
         "source": "pylapp.smoothclicker.android.app-main-40:/layout/content_thanks_row.xml"
     },
     {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-anydpi-v21_ic_expand_less.xml.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-anydpi-v21/ic_expand_less.xml"
+    },
+    {
         "merged": "pylapp.smoothclicker.android.app-release-39:/xml_preferences.xml.flat",
         "source": "pylapp.smoothclicker.android.app-main-40:/xml/preferences.xml"
     },
     {
         "merged": "pylapp.smoothclicker.android.app-release-39:/layout_content_clicker_vibrate_on_click.xml.flat",
         "source": "pylapp.smoothclicker.android.app-main-40:/layout/content_clicker_vibrate_on_click.xml"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-hdpi_ic_expand_more.png.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-hdpi/ic_expand_more.png"
     },
     {
         "merged": "pylapp.smoothclicker.android.app-release-39:/layout_content_credit_row.xml.flat",
@@ -96,6 +136,10 @@
         "source": "pylapp.smoothclicker.android.app-main-40:/layout/fragment_intro_custom.xml"
     },
     {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-xxhdpi_ic_expand_more.png.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-xxhdpi/ic_expand_more.png"
+    },
+    {
         "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-mdpi_credits_flag_ru.png.flat",
         "source": "pylapp.smoothclicker.android.app-main-40:/drawable-mdpi/credits_flag_ru.png"
     },
@@ -120,12 +164,20 @@
         "source": "pylapp.smoothclicker.android.app-main-40:/layout/activity_credits.xml"
     },
     {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-xhdpi_ic_expand_less.png.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-xhdpi/ic_expand_less.png"
+    },
+    {
         "merged": "pylapp.smoothclicker.android.app-release-39:/layout_activity_clicker.xml.flat",
         "source": "pylapp.smoothclicker.android.app-main-40:/layout/activity_clicker.xml"
     },
     {
         "merged": "pylapp.smoothclicker.android.app-release-39:/layout_content_clicker_sounds.xml.flat",
         "source": "pylapp.smoothclicker.android.app-main-40:/layout/content_clicker_sounds.xml"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-xxhdpi_ic_expand_less.png.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-xxhdpi/ic_expand_less.png"
     },
     {
         "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-mdpi_icon_clean_points.png.flat",
@@ -148,12 +200,24 @@
         "source": "pylapp.smoothclicker.android.app-main-40:/menu/menu_clicker.xml"
     },
     {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-xxxhdpi_ic_expand_more.png.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-xxxhdpi/ic_expand_more.png"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-xhdpi_ic_expand_more.png.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-xhdpi/ic_expand_more.png"
+    },
+    {
         "merged": "pylapp.smoothclicker.android.app-release-39:/layout_list_points_item.xml.flat",
         "source": "pylapp.smoothclicker.android.app-main-40:/layout/list_points_item.xml"
     },
     {
         "merged": "pylapp.smoothclicker.android.app-release-39:/layout_activity_ninja.xml.flat",
         "source": "pylapp.smoothclicker.android.app-main-40:/layout/activity_ninja.xml"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-xxxhdpi_ic_expand_less.png.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-xxxhdpi/ic_expand_less.png"
     },
     {
         "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-mdpi_menu_stop_process.png.flat",
@@ -178,6 +242,14 @@
     {
         "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-mdpi_icon_clean_all.png.flat",
         "source": "pylapp.smoothclicker.android.app-main-40:/drawable-mdpi/icon_clean_all.png"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-ldpi_ic_expand_more.png.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-ldpi/ic_expand_more.png"
+    },
+    {
+        "merged": "pylapp.smoothclicker.android.app-release-39:/drawable-ldpi_ic_expand_less.png.flat",
+        "source": "pylapp.smoothclicker.android.app-pngs-35:/drawable-ldpi/ic_expand_less.png"
     },
     {
         "merged": "pylapp.smoothclicker.android.app-release-39:/layout_content_clicker_time_gap.xml.flat",

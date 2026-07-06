@@ -294,8 +294,6 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
             handleMultiPointResult(null);
         } else if (id == R.id.action_clean_all) {
             initDefaultValues();
-        } else if (id == R.id.action_action_list) {
-            startActionListActivity();
         } else if (id == R.id.action_settings) {
             startSettingsActivity();
         } else if (id == R.id.action_exit) {
@@ -871,22 +869,6 @@ public class ClickerActivity extends AppCompatActivity implements ShakeToClean.S
      */
     private void startSelectPointActivity(){
         Intent i = new Intent(ClickerActivity.this, SelectMultiPointsActivity.class);
-        startActivityForResult(i, SELECT_POINTS_ACTIVITY_RESULT_CODE);
-    }
-
-    private void startActionListActivity(){
-        Intent i = new Intent(ClickerActivity.this, ActionListActivity.class);
-        PointsListAdapter pla = (PointsListAdapter) ((Spinner) findViewById(R.id.sPointsToClick)).getAdapter();
-        ArrayList<Integer> xyPoints = new ArrayList<>();
-        if (pla != null && pla.getList().size() > 0) {
-            for (PointsListAdapter.Point p : pla.getList()) {
-                if (p.isUsable) {
-                    xyPoints.add(p.x);
-                    xyPoints.add(p.y);
-                }
-            }
-        }
-        i.putIntegerArrayListExtra(ActionListActivity.EXTRA_POINTS, xyPoints);
         startActivityForResult(i, SELECT_POINTS_ACTIVITY_RESULT_CODE);
     }
 

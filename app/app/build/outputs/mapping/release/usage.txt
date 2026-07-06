@@ -25386,6 +25386,9 @@ pylapp.smoothclicker.android.R$color:
     public static int colorPrimaryDark
     public static int colorPrimaryLight
     public static int colorTransparent
+    public static int lightBackground
+    public static int secondaryText
+    public static int white
     private void <init>()
 pylapp.smoothclicker.android.R$dimen:
     public static int activity_horizontal_margin
@@ -25407,6 +25410,9 @@ pylapp.smoothclicker.android.R$dimen:
     public static int widget_text_field_padding
     private void <init>()
 pylapp.smoothclicker.android.R$drawable:
+    public static int circle_background
+    public static int ic_expand_less
+    public static int ic_expand_more
     public static int icon_clean_all
     public static int icon_clean_points
     public static int logo_512
@@ -25417,11 +25423,28 @@ pylapp.smoothclicker.android.R$drawable:
     public static int menu_stop_process
     private void <init>()
 pylapp.smoothclicker.android.R$id:
+    public static int btnAddAction
+    public static int btnClearAll
+    public static int btnDeleteAction
+    public static int btnMoveDown
+    public static int btnMoveUp
     public static int cv_credits
+    public static int elvActions
+    public static int etDuration
+    public static int etEndX
+    public static int etEndY
+    public static int etStartX
+    public static int etStartY
+    public static int ivExpand
     public static int ivSplashScreenLogo
+    public static int spinnerActionType
+    public static int tvActionCoords
+    public static int tvActionIndex
+    public static int tvActionType
     public static int tvSplashScreenDesc
     private void <init>()
 pylapp.smoothclicker.android.R$layout:
+    public static int activity_action_list
     public static int content_clicker_cards_multipoints
     public static int content_clicker_delay
     public static int content_clicker_notifications
@@ -25435,27 +25458,51 @@ pylapp.smoothclicker.android.R$layout:
     public static int content_clicker_vibrate_on_click
     public static int content_clicker_vibrate_on_start
     public static int fragment_intro_custom
+    public static int list_action_child
+    public static int list_action_group
     private void <init>()
 pylapp.smoothclicker.android.R$menu:
     private void <init>()
 pylapp.smoothclicker.android.R$raw:
     private void <init>()
 pylapp.smoothclicker.android.R$string:
+    public static int action_added
     public static int action_clean_all
     public static int action_clean_points
+    public static int action_click
     public static int action_configuration
+    public static int action_deleted
     public static int action_exit
     public static int action_export
     public static int action_import
+    public static int action_list_title
+    public static int action_long_click
     public static int action_settings
     public static int action_skip
     public static int action_standalone
+    public static int action_swipe
+    public static int action_swipe_long_click
+    public static int action_type
+    public static int add_action
+    public static int all_cleared
     public static int app_intro
     public static int app_name
     public static int app_sharedUserId
     public static int app_sharedUserLabel
+    public static int cannot_move_down
+    public static int cannot_move_up
+    public static int clear_all
+    public static int coordinate_hint
+    public static int delete_action
     public static int dialog_negative_button
     public static int dialog_positive_button
+    public static int duration
+    public static int duration_hint
+    public static int end_x
+    public static int end_y
+    public static int move_down
+    public static int move_up
+    public static int ms
     public static int permission_read_external_storage_summary
     public static int permission_read_external_storage_title
     public static int permission_write_external_storage_summary
@@ -25513,10 +25560,13 @@ pylapp.smoothclicker.android.R$string:
     public static int pref_settings_title
     public static int pref_unlockscript_title
     public static int pref_wakescreenbattery_title
+    public static int select_action_first
     public static int service_label_serviceclicker
     public static int splashscreen_description
     public static int standalone_mode_title_all_points
     public static int standalone_mode_title_all_points_screen
+    public static int start_x
+    public static int start_y
     public static int widget_delay
     public static int widget_delayed_starts
     public static int widget_immediate_starts
@@ -25669,14 +25719,50 @@ pylapp.smoothclicker.android.utils.Config:
     public static final java.lang.String SP_KEY_VIBRATE_ON_CLICK
     public static final java.lang.String SP_KEY_VIBRATE_ON_START
     public void <init>()
+pylapp.smoothclicker.android.views.ActionListActivity$1
+pylapp.smoothclicker.android.views.ActionListActivity$2
+pylapp.smoothclicker.android.views.ActionListActivity$3
+pylapp.smoothclicker.android.views.ActionListActivity$4
+pylapp.smoothclicker.android.views.ActionListActivity$5
+pylapp.smoothclicker.android.views.ActionListActivity$6
+pylapp.smoothclicker.android.views.ActionListActivity$7
+pylapp.smoothclicker.android.views.ActionListActivity$8
+pylapp.smoothclicker.android.views.ActionListActivity:
+    public static final java.lang.String EXTRA_POINTS
+    private pylapp.smoothclicker.android.views.ActionListAdapter mAdapter
+    private android.widget.ExpandableListView mElvActions
+    private java.util.List mPoints
+    private int mSelectedPosition
+    public void <init>()
+    static synthetic int access$000(pylapp.smoothclicker.android.views.ActionListActivity)
+    static synthetic int access$002(pylapp.smoothclicker.android.views.ActionListActivity,int)
+    static synthetic int access$008(pylapp.smoothclicker.android.views.ActionListActivity)
+    static synthetic int access$010(pylapp.smoothclicker.android.views.ActionListActivity)
+    static synthetic java.util.List access$100(pylapp.smoothclicker.android.views.ActionListActivity)
+    static synthetic pylapp.smoothclicker.android.views.ActionListAdapter access$200(pylapp.smoothclicker.android.views.ActionListActivity)
+    static synthetic android.widget.ExpandableListView access$300(pylapp.smoothclicker.android.views.ActionListActivity)
+    static synthetic void access$400(pylapp.smoothclicker.android.views.ActionListActivity)
+    public void onBackPressed()
+    protected void onCreate(android.os.Bundle)
+    protected void onDestroy()
+    private void saveAndReturn()
+pylapp.smoothclicker.android.views.ActionListAdapter$1
+pylapp.smoothclicker.android.views.ActionListAdapter$2
+pylapp.smoothclicker.android.views.ActionListAdapter$3
+pylapp.smoothclicker.android.views.ActionListAdapter$4
+pylapp.smoothclicker.android.views.ActionListAdapter$5
+pylapp.smoothclicker.android.views.ActionListAdapter$6
+pylapp.smoothclicker.android.views.ActionListAdapter
 pylapp.smoothclicker.android.views.ClickerActivity:
     public static final java.lang.String SELECT_POINTS_ACTIVITY_RESULT
     private static final int SELECT_POINTS_ACTIVITY_RESULT_CODE
     private void stopClickingProcess()
 pylapp.smoothclicker.android.views.InputFilter
 pylapp.smoothclicker.android.views.PointsListAdapter$Point:
+    public static final long DEFAULT_DURATION
     public static final int UNDEFINED_X
     public static final int UNDEFINED_Y
+    public void <init>(int,int,int,int,pylapp.smoothclicker.android.utils.ActionType,long)
 pylapp.smoothclicker.android.views.PointsListAdapter:
     public void add(pylapp.smoothclicker.android.views.PointsListAdapter$Point)
     public void clear()
@@ -27538,14 +27624,12 @@ androidx.constraintlayout.solver.PriorityGoalRow:
     public final void clear()
 androidx.constraintlayout.solver.SolverVariable$Type$EnumUnboxingLocalUtility
 androidx.constraintlayout.solver.SolverVariable$Type$EnumUnboxingSharedUtility:
-    public static final synthetic int[] $VALUES
     public static synthetic java.lang.Integer boxedOrdinalOrNull(int)
     public static synthetic void checkNotZero(int)
     public static synthetic void checkNotZero(int,java.lang.String)
     public static synthetic int compareTo(int,int)
     public static synthetic boolean equals(int,int)
     public static synthetic boolean objects$equals(int,int)
-    public static synthetic int[] values(int)
 androidx.constraintlayout.solver.SolverVariable$Type
 androidx.constraintlayout.solver.SolverVariable:
     public java.util.HashSet inRows
@@ -34392,6 +34476,7 @@ pylapp.smoothclicker.android.clickers.ATClicker:
     public static final java.lang.String LOG_TAG
     static void <clinit>()
     public final varargs java.lang.Void doInBackground()
+    public static void executeSingleAction()
     public static void logConfigurationState()
 pylapp.smoothclicker.android.clickers.ServiceClicker$StatusTypes$EnumUnboxingLocalUtility:
     static void <clinit>()
@@ -34539,6 +34624,17 @@ pylapp.smoothclicker.android.tools.screen.WakelockManager:
     public static final java.lang.String LOG_TAG
     public final void refreshContext(android.content.Context)
     public final void releaseWakelock()
+pylapp.smoothclicker.android.utils.ActionType$EnumUnboxingLocalUtility:
+    public static final enum int LONG_CLICK
+    static void <clinit>()
+    public static int _getCode()
+    public static java.lang.String _getDescription()
+    public static int _valueOf(java.lang.String)
+    public static int[] _values()
+    public static synthetic java.lang.String name(int)
+    public static synthetic java.lang.String stringValueOf(int)
+    public static synthetic int valueOf(java.lang.String)
+pylapp.smoothclicker.android.utils.ActionType
 pylapp.smoothclicker.android.utils.Config:
     public static final int DEFAULT_TIME_UNIT_SELECTION
     static void <clinit>()
@@ -34565,6 +34661,7 @@ pylapp.smoothclicker.android.views.ClickerActivity:
     public static void requestSuGrant()
     public final void shakeToClean()
     public static void showInSnackbar()
+    public static void startActionListActivity()
     public static void startClickingProcess()
     public static void startSelectPointActivity()
     public static void startSettingsActivity()

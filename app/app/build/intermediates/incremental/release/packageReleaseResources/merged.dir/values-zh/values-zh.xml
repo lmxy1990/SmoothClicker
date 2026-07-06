@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="credits_descriptions">
+        <item>由pylapp开发的应用</item>
+        <item>图标由Freepik制作，来自www.flaticon.com</item>
+        <item>AndroidX组件</item>
+        <item>AndroidX组件</item>
+        <item>AndroidX组件</item>
+        <item>Android原生组件</item>
+        <item>AndroidX组件</item>
+        <item>Android原生API</item>
+        <item>图标由Freepik制作，来自www.flaticon.com</item>
+        <item>图标由Elegant Themes制作，来自www.flaticon.com</item>
+        <item>图标由Yannick制作，来自www.flaticon.com</item>
+        <item>图标由Vaadin制作，来自www.flaticon.com</item>
+        <item>图标由Madebyoliver制作，来自www.flaticon.com</item>
+    </string-array>
+    <string-array name="credits_labels">
+        <item>自动点击器</item>
+        <item>应用图标</item>
+        <item>FloatingActionButton</item>
+        <item>SwitchCompat</item>
+        <item>ViewPager2</item>
+        <item>RadioGroup</item>
+        <item>SeekBarPreference</item>
+        <item>原生权限API</item>
+        <item>图标</item>
+        <item>图标</item>
+        <item>图标</item>
+        <item>图标</item>
+        <item>图标</item>
+    </string-array>
+    <string-array name="credits_licenses">
+        <item>MIT许可证</item>
+        <item>Flaticon Basic许可证</item>
+        <item>Apache v2许可证</item>
+        <item>Apache v2许可证</item>
+        <item>Apache v2许可证</item>
+        <item>Apache v2许可证</item>
+        <item>Apache v2许可证</item>
+        <item>Apache v2许可证</item>
+        <item>Flaticon Basic许可证</item>
+        <item>CC 3.0 BY许可证</item>
+        <item>CC 3.0 BY许可证</item>
+        <item>CC 3.0 BY许可证</item>
+        <item>Flaticon Basic许可证</item>
+    </string-array>
+    <string-array name="credits_urls">
+        <item>https://github.com/pylapp/SmoothClicker</item>
+        <item>http://www.flaticon.com/free-icon/small-monkey-with-long-tail_28726</item>
+        <item>https://developer.android.com/jetpack/androidx</item>
+        <item>https://developer.android.com/jetpack/androidx</item>
+        <item>https://developer.android.com/jetpack/androidx</item>
+        <item>https://developer.android.com/reference/android/widget/RadioGroup</item>
+        <item>https://developer.android.com/jetpack/androidx</item>
+        <item>https://developer.android.com/training/permissions/requesting</item>
+        <item>http://www.flaticon.com/authors/freepik</item>
+        <item>http://www.flaticon.com/authors/elegant-themes</item>
+        <item>http://www.flaticon.com/authors/yannick</item>
+        <item>http://www.flaticon.com/authors/vaadin</item>
+        <item>http://www.flaticon.com/authors/madebyoliver</item>
+    </string-array>
+    <string-array name="introscreen_summaries">
+        <item>欢迎使用自动点击器！</item>
+        <item>您需要拥有一部已Root的Android设备才能使用此应用。</item>
+        <item>定义多个点击点来执行...</item>
+        <item>...并配置通知、振动等进程设置。</item>
+        <item>可以使用JSON文件存储点击进程的配置。</item>
+        <item>独立模式可以仅使用JSON配置文件启动点击进程。</item>
+        <item>独立模式还可以根据屏幕截图启动点击进程。</item>
+        <item>自动点击器是免费且开源的！</item>
+    </string-array>
+    <string-array name="introscreen_titles">
+        <item>欢迎！</item>
+        <item>Root权限</item>
+        <item>点击设置</item>
+        <item>通知提醒</item>
+        <item>配置文件</item>
+        <item>独立模式</item>
+        <item>屏幕识别</item>
+        <item>自由开源</item>
+    </string-array>
+    <string-array name="standalone_mode_descriptions">
+        <item>使用两个JSON文件设置点击进程</item>
+        <item>使用两个JSON文件和屏幕截图来设置并启动点击进程</item>
+    </string-array>
+    <string-array name="standalone_mode_titles">
+        <item>JSON文件</item>
+        <item>JSON文件并根据屏幕启动</item>
+    </string-array>
+    <string-array name="thanks_flags">
+        <item>RU</item>
+        <item>IT</item>
+        <item>ZH</item>
+    </string-array>
+    <string-array name="thanks_labels">
+        <item>翻译</item>
+        <item>翻译</item>
+        <item>翻译</item>
+    </string-array>
+    <string-array name="thanks_whos">
+        <item>Артем Дементьев</item>
+        <item>fuomag9</item>
+        <item>SmoothClicker Team</item>
+    </string-array>
+    <string name="action_clean_all">重置所有值并删除选中的点</string>
+    <string name="action_clean_points">删除选中的点</string>
+    <string name="action_configuration">配置</string>
+    <string name="action_done">完成</string>
+    <string name="action_exit">退出</string>
+    <string name="action_export">导出到JSON文件</string>
+    <string name="action_import">从JSON文件导入</string>
+    <string name="action_next">下一步</string>
+    <string name="action_settings">设置</string>
+    <string name="action_skip">跳过</string>
+    <string name="action_standalone">独立模式</string>
+    <string name="app_author">https://twitter.com/pylapp</string>
+    <string name="app_intro">欢迎使用自动点击器</string>
+    <string name="app_name">自动点击器</string>
+    <string name="app_name_standalone">自动点击器（独立模式）</string>
+    <string name="app_sharedUserId">pylapp.smoothclicker.android.sharedUserId</string>
+    <string name="app_sharedUserLabel">访问自动点击器世界的ID</string>
+    <string name="dialog_negative_button">取消</string>
+    <string name="dialog_positive_button">确定</string>
+    <string name="easter_egg_message">✿✿✿✿ ʕ •ᴥ•ʔ/ ︻デ═一 火热地狱模式！</string>
+    <string name="error_message_no_click_defined">¯\_(ツ)_/¯ 未定义任何点击</string>
+    <string name="error_message_su_not_granted">超级用户权限未授予 x-(</string>
+    <string name="error_message_was_not_working">(－‸ლ) 进程未启动</string>
+    <string name="error_not_implemented">尚未实现！</string>
+    <string name="error_nothing_to_open_file">哎呀，没有应用可以打开此文件</string>
+    <string name="error_nothing_to_open_json">哎呀，没有应用可以打开.json文件</string>
+    <string name="error_su_missing">使用此应用前您是否已root您的Android设备？这是必需的。</string>
+    <string name="info_export_fail">导出失败</string>
+    <string name="info_export_success">导出成功</string>
+    <string name="info_import_fail">导入失败</string>
+    <string name="info_import_success">导入成功</string>
+    <string name="info_message_invite_new_points">点击屏幕选择点，然后返回</string>
+    <string name="info_message_invite_new_random_points">长按屏幕选择随机点，然后返回</string>
+    <string name="info_message_new_point">在屏幕上选择新的点</string>
+    <string name="info_message_request_su">请求超级用户权限</string>
+    <string name="info_message_start">保存配置并启动程序</string>
+    <string name="info_message_stop">停止所有进程</string>
+    <string name="info_message_su_granted">超级用户权限已授予 :-)</string>
+    <string name="info_standalone_activated">独立模式即将启动</string>
+    <string name="info_standalone_disactivated">独立模式即将停止</string>
+    <string name="message_confirm_exit_content">确定要退出应用吗？</string>
+    <string name="message_confirm_exit_label">退出</string>
+    <string name="message_reinit_config">清理中... </string>
+    <string name="notif_content_text_click_made">新点击 </string>
+    <string name="notif_content_text_clicks_on_going_app">点击进程正在运行（通过应用）...</string>
+    <string name="notif_content_text_clicks_on_going_service">点击进程正在运行（通过服务）...</string>
+    <string name="notif_content_text_clicks_on_going_standalone">点击进程正在运行（独立模式）...</string>
+    <string name="notif_content_text_clicks_over">点击进程已完成</string>
+    <string name="notif_content_text_clicks_stop">点击进程已停止</string>
+    <string name="notif_content_text_countdown">将在以下时间启动：</string>
+    <string name="notif_content_text_su_granted">超级用户权限已授予</string>
+    <string name="notif_content_text_watch_over">监控进程已完成</string>
+    <string name="notif_content_title">自动点击器</string>
+    <string name="permission_read_external_storage_summary">应用需要此权限在专用文件夹中读取配置文件</string>
+    <string name="permission_read_external_storage_title">外部存储读取权限</string>
+    <string name="permission_write_external_storage_summary">应用需要此权限在专用文件夹中写入配置文件</string>
+    <string name="permission_write_external_storage_title">外部存储写入权限</string>
+    <string name="pref_about_subtitle">自动点击器</string>
+    <string name="pref_about_summary">点击获取更多信息</string>
+    <string name="pref_about_title">关于</string>
+    <string name="pref_about_version_app_summary">由pylapp编写 - MIT许可证</string>
+    <string name="pref_about_version_app_title">自动点击器</string>
+    <string name="pref_about_version_title">版本</string>
+    <string name="pref_app_files">存储</string>
+    <string name="pref_app_files_config_content">查看</string>
+    <string name="pref_app_files_config_name">包含配置的文件</string>
+    <string name="pref_app_files_config_title">配置</string>
+    <string name="pref_app_files_points_content">查看</string>
+    <string name="pref_app_files_points_name">包含点数据的文件</string>
+    <string name="pref_app_files_points_title">点数据</string>
+    <string name="pref_app_files_summary">点击管理正在使用的文件</string>
+    <string name="pref_app_files_title">应用使用的文件</string>
+    <string name="pref_app_files_trigger_content">查看</string>
+    <string name="pref_app_files_trigger_name">启动点击进程的图片文件</string>
+    <string name="pref_app_files_trigger_title">触发图片</string>
+    <string name="pref_app_files_unlock_content">查看</string>
+    <string name="pref_app_files_unlock_name">包含解锁脚本的文件</string>
+    <string name="pref_app_files_unlock_title">解锁脚本</string>
+    <string name="pref_chainfire_url">https://www.chainfire.eu/</string>
+    <string name="pref_credits_title">致谢</string>
+    <string name="pref_heimdall_url">https://doc.ubuntu-fr.org/heimdall</string>
+    <string name="pref_key_credit_summary">点击查看许可证</string>
+    <string name="pref_key_credit_title">本应用使用了第三方内容</string>
+    <string name="pref_key_forcescreenon_battery_summary">当屏幕关闭时，如果设备使用电池而非电源，将屏幕打开</string>
+    <string name="pref_key_forcescreenon_battery_title">强制屏幕常亮</string>
+    <string name="pref_key_help_summary">开始教程</string>
+    <string name="pref_key_help_title">帮助</string>
+    <string name="pref_key_root_chainfire_summary">访问Chainfire获取更多Root知识</string>
+    <string name="pref_key_root_chainfire_title">Chainfire XDA</string>
+    <string name="pref_key_root_heimdall_summary">使用Heimdall在Linux上Root设备</string>
+    <string name="pref_key_root_heimdall_title">Heimdall</string>
+    <string name="pref_key_root_odin_summary">使用Odin在Windows上Root设备</string>
+    <string name="pref_key_root_odin_title">Odin</string>
+    <string name="pref_key_unlockscript_summary">使用包含系统命令的自定义脚本解锁设备</string>
+    <string name="pref_key_unlockscript_title">ADB脚本</string>
+    <string name="pref_key_wakelock_summary">使用唤醒锁保持设备屏幕常亮（可能大幅消耗电池）</string>
+    <string name="pref_key_wakelock_title">唤醒锁</string>
+    <string name="pref_odin_url">http://odindownload.com/</string>
+    <string name="pref_picture_recognition_title">屏幕识别</string>
+    <string name="pref_play_store_summary">欢迎评价和评论</string>
+    <string name="pref_play_store_title">★ Google Play ★</string>
+    <string name="pref_root_subtitle">如何Root我的设备？</string>
+    <string name="pref_root_summary">点击获取更多信息</string>
+    <string name="pref_root_title">Root</string>
+    <string name="pref_settings_prfrequency_summary">捕获间隔越高，系统截取屏幕触发点击进程的速度越慢</string>
+    <string name="pref_settings_prfrequency_title">捕获间隔</string>
+    <string name="pref_settings_prthreshold_summary">阈值越高，触发图片与最后截屏之间的差异越容易被接受</string>
+    <string name="pref_settings_prthreshold_title">阈值</string>
+    <string name="pref_settings_shaketoclean_summary">摇动设备清空配置</string>
+    <string name="pref_settings_shaketoclean_title">摇动清理</string>
+    <string name="pref_settings_title">主要设置</string>
+    <string name="pref_unlockscript_title">解锁</string>
+    <string name="pref_wakescreenbattery_title">唤醒与电池</string>
+    <string name="service_label_serviceclicker">自动点击器服务</string>
+    <string name="snackbar_action_dismiss">撤销</string>
+    <string name="snackbar_see_config_file">查看</string>
+    <string name="splashscreen_description">自动点击器</string>
+    <string name="standalone_bad_action">哎呀...您没有使用正确的操作来启动此活动！</string>
+    <string name="standalone_init_config">正在读取配置值...</string>
+    <string name="standalone_init_points">正在读取点击点...</string>
+    <string name="standalone_mode_title_all_points">JSON文件</string>
+    <string name="standalone_mode_title_all_points_screen">JSON文件并根据屏幕启动</string>
+    <string name="standalone_start_click_process">独立模式正在启动...</string>
+    <string name="su_grant_error_prefix">获取SU权限时发生错误：</string>
+    <string name="warning_hazard_repeat_endless_content">确定要进行无限重复吗？此操作可能对您的设备造成危险。</string>
+    <string name="warning_hazard_repeat_endless_no">取消！</string>
+    <string name="warning_hazard_repeat_endless_title">危险操作</string>
+    <string name="warning_hazard_repeat_endless_yes">确定！</string>
+    <string name="widget_delay">延迟</string>
+    <string name="widget_delayed_starts">延迟启动</string>
+    <string name="widget_immediate_starts">立即启动</string>
+    <string name="widget_no_points">尚未选择任何点</string>
+    <string name="widget_notifications">通知</string>
+    <string name="widget_repeat">重复次数</string>
+    <string name="widget_repeat_endless">无限重复</string>
+    <string name="widget_repeat_hint">...次</string>
+    <string name="widget_sounds">每次点击响铃</string>
+    <string name="widget_speed">每次点击间隔时间</string>
+    <string name="widget_standalone_dialog_title">独立模式</string>
+    <string name="widget_type_of_start">启动方式</string>
+    <string name="widget_unit_time">时间</string>
+    <string name="widget_unit_time_h">小时</string>
+    <string name="widget_unit_time_m">分钟</string>
+    <string name="widget_unit_time_ms">毫秒</string>
+    <string name="widget_unit_time_s">秒</string>
+    <string name="widget_vibrate_on_click">点击时振动</string>
+    <string name="widget_vibrate_on_start">启动时振动</string>
+    <string name="widget_xy_coordinates">点击点坐标</string>
+</resources>

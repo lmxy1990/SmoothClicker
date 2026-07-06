@@ -27,8 +27,8 @@
     package="pylapp.smoothclicker.android"
     android:sharedUserId="@string/app_sharedUserId"
     android:sharedUserLabel="@string/app_sharedUserLabel"
-    android:versionCode="35"
-    android:versionName="2.2.0 - Jelly Bean" >
+    android:versionCode="36"
+    android:versionName="2.3.0 - KitKat" >
 
     <uses-sdk
         android:minSdkVersion="19"

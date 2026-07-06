@@ -90,7 +90,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         NotificationsManager.getInstance(this).stopAllNotifications();
         // If the app has been started previously, do not start the splash screen and run to the next activity
         if ( ! sIsFirstLaunch) {
-            Intent i = new Intent(SplashScreenActivity.this, ClickerActivity.class);
+            Intent i = new Intent(SplashScreenActivity.this, ScriptListActivity.class);
             startActivity(i);
             finish();
         }
@@ -125,7 +125,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
                 // The app has been started previously, the user knows it, so go to the "main" activity
                 } else {
-                    Intent i = new Intent(SplashScreenActivity.this, ClickerActivity.class);
+                    Intent i = new Intent(SplashScreenActivity.this, ScriptListActivity.class);
                     startActivity(i);
                     finish();
                 }
