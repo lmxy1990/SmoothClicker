@@ -33,6 +33,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import pylapp.smoothclicker.android.R;
+import pylapp.smoothclicker.android.utils.ActionType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -215,68 +216,109 @@ public class PointsListAdapter extends BaseAdapter {
      * ************* */
 
     /**
-     * Models a point with its X and Y coordinates
+     * Models an action point with coordinates and action type
      */
     public static class Point {
 
-        /**
-         * The X coordinate
-         */
         public int x;
-        /**
-         * The Y coordinate
-         */
         public int y;
-        /**
-         * A description
-         */
+        public int endX;
+        public int endY;
         public String desc;
-        /**
-         * Should we click on it ?
-         */
         public boolean isUsable;
+        public ActionType actionType;
+        public long duration;
 
         public static final int UNDEFINED_X = -1;
         public static final int UNDEFINED_Y = -1;
+        public static final long DEFAULT_DURATION = 100;
 
         public Point( int x, int y ){
             super();
             this.x = x;
             this.y = y;
+            this.endX = UNDEFINED_X;
+            this.endY = UNDEFINED_Y;
             desc = null;
             isUsable = true;
+            actionType = ActionType.CLICK;
+            duration = DEFAULT_DURATION;
         }
 
         public Point( int x, int y, String desc ){
             super();
             this.x = x;
             this.y = y;
+            this.endX = UNDEFINED_X;
+            this.endY = UNDEFINED_Y;
             this.desc = desc;
             isUsable = true;
+            actionType = ActionType.CLICK;
+            duration = DEFAULT_DURATION;
         }
 
         public Point( String desc ){
             super();
             this.x = UNDEFINED_X;
             this.y = UNDEFINED_Y;
+            this.endX = UNDEFINED_X;
+            this.endY = UNDEFINED_Y;
             this.desc = desc;
             isUsable = false;
+            actionType = ActionType.CLICK;
+            duration = DEFAULT_DURATION;
+        }
+
+        public Point(int x, int y, int endX, int endY, ActionType actionType, long duration) {
+            super();
+            this.x = x;
+            this.y = y;
+            this.endX = endX;
+            this.endY = endY;
+            this.desc = null;
+            this.isUsable = true;
+            this.actionType = actionType;
+            this.duration = duration;
+        }
+
+        public Point(int x, int y, int endX, int endY, String desc, ActionType actionType, long duration) {
+            super();
+            this.x = x;
+            this.y = y;
+            this.endX = endX;
+            this.endY = endY;
+            this.desc = desc;
+            this.isUsable = true;
+            this.actionType = actionType;
+            this.duration = duration;
         }
 
         @Override
         public String toString(){
             StringBuilder sb = new StringBuilder();
             if ( x == UNDEFINED_X || y == UNDEFINED_Y ) return desc;
-            if ( desc != null && desc.length() > 0 ) sb.append(desc).append(" / ");
-            sb.append("x = ").append(x).append(" / y = ").append(y);
+            sb.append(actionType.getDescription());
+            sb.append(" (").append(x).append(",").append(y);
+            if (actionType == ActionType.SWIPE || actionType == ActionType.SWIPE_LONG_CLICK) {
+                sb.append(" -> ").append(endX).append(",").append(endY);
+            }
+            sb.append(")");
+            if (duration > DEFAULT_DURATION) {
+                sb.append(" ").append(duration).append("ms");
+            }
+            if ( desc != null && desc.length() > 0 ) sb.append(" ").append(desc);
             return sb.toString();
         }
 
         public String toJson(){
             StringBuilder sb = new StringBuilder();
-            sb.append("{\"x\" : ").append("\"").append(x).append("\", ");
-            sb.append("\"y\" : ").append("\"").append(y).append("\", ");
-            sb.append("\"desc\" : ").append("\"").append(desc).append("\"");
+            sb.append("{\"x\" : \"").append(x).append("\", ");
+            sb.append("\"y\" : \"").append(y).append("\", ");
+            sb.append("\"endX\" : \"").append(endX).append("\", ");
+            sb.append("\"endY\" : \"").append(endY).append("\", ");
+            sb.append("\"actionType\" : \"").append(actionType.getCode()).append("\", ");
+            sb.append("\"duration\" : \"").append(duration).append("\", ");
+            sb.append("\"desc\" : \"").append(desc != null ? desc : "").append("\"");
             sb.append("}");
             return sb.toString();
         }

@@ -10,8 +10,8 @@ android {
         applicationId "pylapp.smoothclicker.android"
         minSdk 19
         targetSdk 34
-        versionCode 35
-        versionName "2.2.0 - Jelly Bean"
+        versionCode 36
+        versionName "2.3.0 - KitKat"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

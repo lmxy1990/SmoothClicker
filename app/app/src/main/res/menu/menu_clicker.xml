@@ -43,6 +43,13 @@
         android:icon="@drawable/icon_clean_all"
         app:showAsAction="ifRoom" />
 
+    <!-- The "action list" feature -->
+    <item
+        android:id="@+id/action_action_list"
+        android:orderInCategory="100"
+        android:title="@string/action_list_title"
+        app:showAsAction="never" />
+
     <!-- The "standalone" menu -->
     <item
         android:id="@+id/action_standalone"

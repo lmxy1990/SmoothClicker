@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+/*
     MIT License
 
     Copyright (c) 2016  Pierre-Yves Lapersonne (Mail: dev@pylapersonne.info)
@@ -21,18 +20,38 @@
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
--->
-<!-- ✿✿✿✿ ʕ •ᴥ•ʔ/ ︻デ═一 -->
+ */
 
-<resources>
-    <color name="colorBlack">#000000</color>
-    <color name="colorPrimary">#9c27b0</color>
-    <color name="colorPrimaryDark">#7b1fa2</color>
-    <color name="colorAccent">#01579b</color>
-    <color name="colorMisterGrey">#9e9e9e</color>
-    <color name="colorTransparent">#409c27b0</color>
-    <color name="colorPrimaryLight">#ce93d8</color>
-    <color name="white">#FFFFFF</color>
-    <color name="secondaryText">#757575</color>
-    <color name="lightBackground">#f5f5f5</color>
-</resources>
+package pylapp.smoothclicker.android.utils;
+
+public enum ActionType {
+    CLICK(0, "点击"),
+    LONG_CLICK(1, "长按"),
+    SWIPE(2, "滑动"),
+    SWIPE_LONG_CLICK(3, "滑动+长按");
+
+    private final int code;
+    private final String description;
+
+    ActionType(int code, String description) {
+        this.code = code;
+        this.description = description;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public static ActionType fromCode(int code) {
+        for (ActionType type : values()) {
+            if (type.code == code) {
+                return type;
+            }
+        }
+        return CLICK;
+    }
+}

@@ -32,6 +32,7 @@ import pylapp.smoothclicker.android.R;
 import pylapp.smoothclicker.android.notifiers.NotificationsManager;
 import pylapp.smoothclicker.android.tools.config.ConfigImporter;
 import pylapp.smoothclicker.android.tools.screen.AsyncTaskForScreen;
+import pylapp.smoothclicker.android.utils.ActionType;
 import pylapp.smoothclicker.android.utils.Config;
 import pylapp.smoothclicker.android.tools.Logger;
 import pylapp.smoothclicker.android.views.PointsListAdapter;
@@ -274,40 +275,31 @@ public class ATClicker extends AsyncTaskForScreen<List<PointsListAdapter.Point>,
             NotificationsManager.getInstance(mContext).makeClicksOnGoingNotificationByApp();
         }
 
-        /*
-         * Is the execution endless ?
-         */
         if (mIsRepeatEndless) {
 
             while (true) {
                 if (checkIfCancelled()) return null;
                 Logger.d(LOG_TAG, "Should repeat the process ENDLESSLY");
                 forceScreenState();
-                executeTap();
+                executeAction();
                 waitIfNeeded();
             }
 
-        /*
-         * Should we repeat the execution ?
-         */
         } else if ( mRepeat > 1 ){
 
             Logger.d(LOG_TAG, "Should repeat the process : " + mRepeat);
             for ( int i = 0; i < mRepeat; i++ ){
                 if ( checkIfCancelled() ) return null;
                 forceScreenState();
-                executeTap();
+                executeAction();
                 waitIfNeeded();
             }
 
-        /*
-         * Just one execution
-         */
         } else {
             if ( checkIfCancelled() ) return null;
             Logger.d(LOG_TAG, "Should NOT repeat the process : "+mRepeat);
             forceScreenState();
-            executeTap();
+            executeAction();
         }
 
         NotificationsManager.getInstance(mContext).stopAllNotifications();
@@ -371,9 +363,9 @@ public class ATClicker extends AsyncTaskForScreen<List<PointsListAdapter.Point>,
     }
 
     /**
-     * Executes the tap action
+     * Executes the action based on the action type
      */
-    private void executeTap(){
+    private void executeAction(){
 
         final int NUMBER_OF_POINTS = mPoints.size();
 
@@ -383,43 +375,76 @@ public class ATClicker extends AsyncTaskForScreen<List<PointsListAdapter.Point>,
 
             if ( ! p.isUsable) continue;
 
-            int x = p.x;
-            int y = p.y;
+            executeSingleAction(p);
 
-            String shellCmd = "/system/bin/input tap " + x + " " + y + " && echo \""+KEYWORD_SHELL_CLICK_DONE+"\" \n";
-            Logger.d(LOG_TAG, "The system command will be executed : " + shellCmd);
-            try {
-                if ( mProcess == null || mOutputStream == null ) throw new IllegalStateException("The process or its stream is not defined !");
-                mOutputStream.writeBytes(shellCmd);
-                InputStream inputStream = mProcess.getInputStream();
-                byte[] buffer = new byte[1024];
-                while ( true ){ // FIXME May be hazardous
-                    int read = inputStream.read(buffer);
-                    String out = new String(buffer, 0, read);
-                    if (out.contains(KEYWORD_SHELL_CLICK_DONE)) break;
-                }
-                NotificationsManager.getInstance(mContext).makeNewClickNotifications(x, y);
-            } catch ( IOException ioe ){
-                Logger.e(LOG_TAG, "Exception thrown during tap execution : " + ioe.getMessage());
-                ioe.printStackTrace();
-                displayToast("An error occurs during tap execution: " + ioe.getMessage());
-                // Retry to get the SU process (this operation may fail)
-                try {
-                    mProcess = Runtime.getRuntime().exec("su");
-                } catch ( IOException ioe2 ){
-                    ioe2.printStackTrace();
-                    Logger.e(LOG_TAG, "Exception thrown during tap execution (get again SU): " + ioe2.getMessage());
-                }
-            }
-
-            // Wait before the next point to click if there is some points to click
-            // We deal with the TIME GAP option
             if ( i < NUMBER_OF_POINTS - 1 ) {
                 waitIfNeeded();
             }
 
-        } // End of for ( PointsListAdapter.Point p : mPoints )
+        }
 
+    }
+
+    /**
+     * Executes a single action based on its type
+     */
+    private void executeSingleAction(PointsListAdapter.Point p) {
+        ActionType actionType = p.actionType;
+        int x = p.x;
+        int y = p.y;
+        int endX = p.endX;
+        int endY = p.endY;
+        long duration = p.duration;
+
+        String shellCmd;
+
+        switch (actionType) {
+            case LONG_CLICK:
+                shellCmd = "/system/bin/input swipe " + x + " " + y + " " + x + " " + y + " " + duration + " && echo \""+KEYWORD_SHELL_CLICK_DONE+"\" \n";
+                break;
+            case SWIPE:
+                if (endX == PointsListAdapter.Point.UNDEFINED_X || endY == PointsListAdapter.Point.UNDEFINED_Y) {
+                    shellCmd = "/system/bin/input tap " + x + " " + y + " && echo \""+KEYWORD_SHELL_CLICK_DONE+"\" \n";
+                } else {
+                    shellCmd = "/system/bin/input swipe " + x + " " + y + " " + endX + " " + endY + " " + duration + " && echo \""+KEYWORD_SHELL_CLICK_DONE+"\" \n";
+                }
+                break;
+            case SWIPE_LONG_CLICK:
+                if (endX == PointsListAdapter.Point.UNDEFINED_X || endY == PointsListAdapter.Point.UNDEFINED_Y) {
+                    shellCmd = "/system/bin/input swipe " + x + " " + y + " " + x + " " + y + " " + duration + " && echo \""+KEYWORD_SHELL_CLICK_DONE+"\" \n";
+                } else {
+                    shellCmd = "/system/bin/input swipe " + x + " " + y + " " + endX + " " + endY + " " + duration + " && echo \""+KEYWORD_SHELL_CLICK_DONE+"\" \n";
+                }
+                break;
+            case CLICK:
+            default:
+                shellCmd = "/system/bin/input tap " + x + " " + y + " && echo \""+KEYWORD_SHELL_CLICK_DONE+"\" \n";
+                break;
+        }
+
+        Logger.d(LOG_TAG, "The system command will be executed : " + shellCmd);
+        try {
+            if ( mProcess == null || mOutputStream == null ) throw new IllegalStateException("The process or its stream is not defined !");
+            mOutputStream.writeBytes(shellCmd);
+            InputStream inputStream = mProcess.getInputStream();
+            byte[] buffer = new byte[1024];
+            while ( true ){
+                int read = inputStream.read(buffer);
+                String out = new String(buffer, 0, read);
+                if (out.contains(KEYWORD_SHELL_CLICK_DONE)) break;
+            }
+            NotificationsManager.getInstance(mContext).makeNewClickNotifications(x, y);
+        } catch ( IOException ioe ){
+            Logger.e(LOG_TAG, "Exception thrown during action execution : " + ioe.getMessage());
+            ioe.printStackTrace();
+            displayToast("An error occurs during action execution: " + ioe.getMessage());
+            try {
+                mProcess = Runtime.getRuntime().exec("su");
+            } catch ( IOException ioe2 ){
+                ioe2.printStackTrace();
+                Logger.e(LOG_TAG, "Exception thrown during action execution (get again SU): " + ioe2.getMessage());
+            }
+        }
     }
 
     /**

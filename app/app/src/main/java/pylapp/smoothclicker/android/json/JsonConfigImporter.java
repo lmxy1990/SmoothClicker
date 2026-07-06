@@ -37,6 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pylapp.smoothclicker.android.tools.config.ConfigImporter;
+import pylapp.smoothclicker.android.utils.ActionType;
 import pylapp.smoothclicker.android.utils.Config;
 import pylapp.smoothclicker.android.views.PointsListAdapter;
 
@@ -354,7 +355,26 @@ public class JsonConfigImporter implements ConfigImporter {
                 int x = Integer.parseInt(point.getString(JsonFileParser.JSON_OBJECT_X));
                 int y = Integer.parseInt(point.getString(JsonFileParser.JSON_OBJECT_Y));
                 String desc = point.getString(JsonFileParser.JSON_OBJECT_DESC);
-                PointsListAdapter.Point p = new PointsListAdapter.Point(x, y, desc);
+                
+                int endX = PointsListAdapter.Point.UNDEFINED_X;
+                int endY = PointsListAdapter.Point.UNDEFINED_Y;
+                ActionType actionType = ActionType.CLICK;
+                long duration = PointsListAdapter.Point.DEFAULT_DURATION;
+                
+                if (point.has("endX")) {
+                    endX = Integer.parseInt(point.getString("endX"));
+                }
+                if (point.has("endY")) {
+                    endY = Integer.parseInt(point.getString("endY"));
+                }
+                if (point.has("actionType")) {
+                    actionType = ActionType.fromCode(Integer.parseInt(point.getString("actionType")));
+                }
+                if (point.has("duration")) {
+                    duration = Long.parseLong(point.getString("duration"));
+                }
+                
+                PointsListAdapter.Point p = new PointsListAdapter.Point(x, y, endX, endY, desc, actionType, duration);
                 mPoints.add(p);
             }
         } catch ( Exception e ){
