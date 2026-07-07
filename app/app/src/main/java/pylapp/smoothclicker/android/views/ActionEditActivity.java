@@ -59,8 +59,10 @@ public class ActionEditActivity extends AppCompatActivity {
         mEtWaitTime = findViewById(R.id.etWaitTime);
         mEtRepeat = findViewById(R.id.etRepeat);
 
+        LinearLayout layoutCoords = findViewById(R.id.layoutCoords);
         LinearLayout layoutEndCoords = findViewById(R.id.layoutEndCoords);
         LinearLayout layoutWaitTime = findViewById(R.id.layoutWaitTime);
+        LinearLayout layoutRepeat = findViewById(R.id.layoutRepeat);
 
         if (mAction != null) {
             mEtName.setText(mAction.name);
@@ -73,18 +75,29 @@ public class ActionEditActivity extends AppCompatActivity {
             if (mAction.type == Action.TYPE_SWIPE) {
                 mEtEndX.setText(String.valueOf(mAction.endX));
                 mEtEndY.setText(String.valueOf(mAction.endY));
+                layoutCoords.setVisibility(View.VISIBLE);
                 layoutEndCoords.setVisibility(View.VISIBLE);
                 layoutWaitTime.setVisibility(View.VISIBLE);
+                layoutRepeat.setVisibility(View.VISIBLE);
             } else if (mAction.type == Action.TYPE_CLICK) {
+                layoutCoords.setVisibility(View.VISIBLE);
                 layoutEndCoords.setVisibility(View.GONE);
                 layoutWaitTime.setVisibility(View.GONE);
+                layoutRepeat.setVisibility(View.VISIBLE);
+            } else if (mAction.type == Action.TYPE_DELAY) {
+                layoutCoords.setVisibility(View.GONE);
+                layoutEndCoords.setVisibility(View.GONE);
+                layoutWaitTime.setVisibility(View.GONE);
+                layoutRepeat.setVisibility(View.GONE);
             }
         } else {
-            mEtDuration.setText("100");
+            mEtDuration.setText("1000");
             mEtWaitTime.setText("0");
             mEtRepeat.setText("1");
+            layoutCoords.setVisibility(View.VISIBLE);
             layoutEndCoords.setVisibility(View.GONE);
             layoutWaitTime.setVisibility(View.GONE);
+            layoutRepeat.setVisibility(View.VISIBLE);
         }
 
         Button btnCancel = findViewById(R.id.btnCancel);

@@ -17,6 +17,7 @@ public class Action {
     public static final int TYPE_CLICK = 0;
     public static final int TYPE_SWIPE = 1;
     public static final int TYPE_MULTI = 2;
+    public static final int TYPE_DELAY = 3;
 
     public Action() {
     }

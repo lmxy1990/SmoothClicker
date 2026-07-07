@@ -207,7 +207,7 @@ public class ActionListActivity extends AppCompatActivity {
     }
 
     private void showAddActionDialog() {
-        final String[] actionTypes = {getString(R.string.action_click), getString(R.string.action_swipe), getString(R.string.action_multi)};
+        final String[] actionTypes = {getString(R.string.action_click), getString(R.string.action_swipe), getString(R.string.action_multi), getString(R.string.action_delay)};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.add_action)
                 .setItems(actionTypes, new DialogInterface.OnClickListener() {
@@ -273,6 +273,9 @@ public class ActionListActivity extends AppCompatActivity {
                             cmd = "/system/bin/input tap " + action.x + " " + action.y + "\n";
                         } else if (action.type == Action.TYPE_SWIPE) {
                             cmd = "/system/bin/input swipe " + action.x + " " + action.y + " " + action.endX + " " + action.endY + " " + action.duration + "\n";
+                        } else if (action.type == Action.TYPE_DELAY) {
+                            Thread.sleep(action.duration);
+                            continue;
                         } else {
                             List<MultiAction> multiActions = mDbManager.getMultiActionsByParent(action.id);
                             for (MultiAction ma : multiActions) {

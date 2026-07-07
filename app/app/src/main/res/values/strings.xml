@@ -212,6 +212,7 @@
     <string name="action_swipe">Swipe</string>
     <string name="action_swipe_long_click">Swipe + Long Click</string>
     <string name="action_multi">Multi</string>
+    <string name="action_delay">Delay</string>
     <string name="action_added">Action added</string>
     <string name="action_deleted">Action deleted</string>
     <string name="select_action_first">Select an action first</string>
@@ -254,6 +255,7 @@
     <string name="click_desc">Click (%1$d,%2$d)</string>
     <string name="swipe_desc">Swipe (%1$d,%2$d) → (%3$d,%4$d)</string>
     <string name="multi_desc">Multi-touch actions</string>
+    <string name="delay_desc">Delay %1$dms</string>
 
     <!-- Action Edit -->
     <string name="edit_action">Edit Action</string>
@@ -271,7 +273,6 @@
     <string name="edit_multi_action">Edit Multi-action</string>
     <string name="add_sub_action">Add Sub-action</string>
     <string name="delay">Delay</string>
-    <string name="delay_desc">Delay %dms</string>
 
     <!-- Permissions -->
     <string name="permission_write_external_storage_title">EXTERNAL STORAGE WRITE permission</string>

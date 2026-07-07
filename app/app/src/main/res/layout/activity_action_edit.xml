@@ -60,6 +60,7 @@
 
             <!-- Coordinates Card -->
             <LinearLayout
+                android:id="@+id/layoutCoords"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -333,6 +334,7 @@
 
             <!-- Repeat Card -->
             <LinearLayout
+                android:id="@+id/layoutRepeat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"

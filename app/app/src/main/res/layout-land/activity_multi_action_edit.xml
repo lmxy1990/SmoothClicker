@@ -128,6 +128,6 @@
         android:backgroundTint="@color/colorAccent"
         android:tint="@color/white"
         app:elevation="6dp"
-        app:fabSize="normal"/>
+        app:fabSize="mini"/>
 
 </FrameLayout>

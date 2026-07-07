@@ -25,4 +25,5 @@
     <color name="clickTypeColor">#007aff</color>
     <color name="swipeTypeColor">#34c759</color>
     <color name="multiTypeColor">#5856d6</color>
+    <color name="delayTypeColor">#ff9f0a</color>
 </resources>

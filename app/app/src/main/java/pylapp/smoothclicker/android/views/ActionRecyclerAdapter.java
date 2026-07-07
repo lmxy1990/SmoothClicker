@@ -62,6 +62,10 @@ public class ActionRecyclerAdapter extends RecyclerView.Adapter<ActionRecyclerAd
             iconRes = R.drawable.ic_multi;
             circleBgRes = R.drawable.circle_multi_background;
             desc = mContext.getString(R.string.multi_desc);
+        } else if (action.type == Action.TYPE_DELAY) {
+            iconRes = R.drawable.ic_delay;
+            circleBgRes = R.drawable.circle_delay_background;
+            desc = mContext.getString(R.string.delay_desc, action.duration);
         }
         holder.ivActionIcon.setImageResource(iconRes);
         holder.llIconContainer.setBackgroundResource(circleBgRes);
