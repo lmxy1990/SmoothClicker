@@ -1,0 +1,99 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs
+hs_err_pid*
+replay_pid*
+
+# Android build output
+app/app/build/
+app/build/
+build/
+
+# Gradle
+.gradle/
+!app/gradle/wrapper/gradle-wrapper.jar
+!app/gradle/wrapper/gradle-wrapper.properties
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local configuration
+app/local.properties
+
+# Keystore files
+*.jks
+*.keystore
+
+# Test output
+app/app/build/reports/
+app/app/build/test-results/
+
+# APK files
+*.apk
+*.ap_
+*.aab
+
+# DEX files
+*.dex
+
+# Proguard
+proguard/
+
+# External native build
+.externalNativeBuild
+.cxx/
+
+# Android Profiler
+*.hprof
+*.trace
+
+# Generated files
+bin/
+gen/
+out/
+
+# Google Services
+google-services.json
+
+# Fabric
+fabric.properties
+
+# Android Studio captures
+captures/
+
+# Navigation editor
+.navigation/
+
+# Local history
+.idea/localHistory/
+
+# Output directories
+app/release/
+app/releases/
